@@ -1,0 +1,14 @@
+{
+  "name": "oc_p3_projet",
+  "version": "1.0.0",
+  "description": ".json propre au projet p3 Open Classroom",
+  "main": "index.js",
+  "dependencies": {
+    "autoprefixer": "^10.0.2"
+  },
+  "scripts": {
+    "sass": "sass --watch ./scss/main.scss:./public/styles/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
