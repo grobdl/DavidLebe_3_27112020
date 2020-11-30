@@ -1,0 +1,22 @@
+.head {
+	&--main {
+		@include flexbox(wrap, '', '', '');
+		& a {
+			display: none;
+		}
+		& h1 {
+			width: 100%;
+			margin: 0;
+		}
+	}
+	&--page {
+		@include flexbox(wrap, '', '', center);
+		& a {
+			width: 10%;
+		}
+		& h1 {
+			width: 90%;
+			margin: 0;
+		}
+	}
+}

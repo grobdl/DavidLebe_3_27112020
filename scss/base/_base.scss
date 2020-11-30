@@ -1,0 +1,17 @@
+body {
+	max-width: 480px;
+	min-width: 360px;
+	margin: auto;
+	border: 1px solid;
+}
+
+* {
+	box-sizing: border-box;
+	text-transform: capitalize;
+	width: 100%;
+	text-align: center;
+}
+
+a {
+	display: inline-block;
+}

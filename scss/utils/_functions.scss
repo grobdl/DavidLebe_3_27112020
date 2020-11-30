@@ -1,0 +1,7 @@
+@function enlight($color, $light_value) {
+	$hue: hue($color);
+	$saturation: saturation($color);
+	$light: lightness($color) + $light_value;
+	$color: hsl($hue, $saturation, $light);
+	@return $color;
+}
