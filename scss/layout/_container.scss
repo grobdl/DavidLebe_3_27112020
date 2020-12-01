@@ -5,14 +5,17 @@ section {
 	}
 }
 
+.form {
+	@include flexbox($flex_form);
+	@include section_header($shead_map, form);
+}
+
 .howto {
-	@include flexbox(wrap, column, flex-start, flex-end);
-	& h2 {
-		text-align: left;
-	}
-	&__bloc {
+	@include flexbox($flex_howto);
+	@include section_header($shead_map, howto);
+	& .bloc {
 		position: relative;
-		@include flexbox(wrap, row, flex-start, stretch);
+		@include flexbox($bloc_main);
 		@include shadows($howto_shdw);
 		width: calc(95% - 15px);
 		border-radius: 10px;
@@ -33,7 +36,7 @@ section {
 			border-radius: 50%;
 		}
 		&__rule {
-			@include flexbox(wrap, row, center, center);
+			@include flexbox($howto_rule);
 			& > * {
 				width: auto;
 				padding: 0px 5px 0px 5px;

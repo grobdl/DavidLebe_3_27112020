@@ -20,87 +20,90 @@
                 <i class="fas fa-map-marker-alt"></i>
                 <input type="text" value="Paris, Belleville">
             </div>
-            <div class="form__slogan">
+            <div class="form__header">
                 <h2>Réservez le menu qui vous convient</h2>
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
             </div>
             <button class="form__btn">Explorer nos restaurants</button>
         </section>
         <section class="howto">
-            <h2>Fonctionnement</h2>
-            <div class="howto__bloc">
-                <span class="howto__bloc__no">1</span>
-                <div class="howto__bloc__rule">
+            <div class="howto__header">
+                <h2>Fonctionnement</h2>
+            </div>
+            <div class="bloc">
+                <span class="bloc__no">1</span>
+                <div class="bloc__rule">
                     <i class="fas fa-mobile-alt"></i>
                     <p>Choisissez un restaurant</p>
                 </div>
             </div>
-            <div class="howto__bloc">
-                <span class="howto__bloc__no">2</span>
-                <div class="howto__bloc__rule">
+            <div class="bloc">
+                <span class="bloc__no">2</span>
+                <div class="bloc__rule">
                     <i class="fas fa-list-ul"></i>
                     <p>Composez votre menu</p>
                 </div>
             </div>
-            <div class="howto__bloc purple">
-                <span class="howto__bloc__no">3</span>
-                <div class="howto__bloc__rule">
+            <div class="bloc purple">
+                <span class="bloc__no">3</span>
+                <div class="bloc__rule">
                     <i class="fas fa-store"></i>
                     <p>Dégustez au restaurant</p>
                 </div>
             </div>
         </section>
         <section class="list">
-            <h2 class="list__title">Restaurants</h2>
-            <div class="list__header"></div>
-            <a href="pages/la_palette_du_gout.html">
-                <article class="resto">
-                    <div class="resto__img--new">
-                        <img src="public/images/restaurants/palette.jpg" alt="La palette du goût">
-                    </div>
-                    <div class="resto__descr">
-                        <h3 class="resto__descr_nom">La palette du goût</h3>
-                        <p class="resto__descr_nom">Ménilmontant</p> 
-                        <div class="resto__descr__fav"><i class="far fa-heart"></i></div>                  
-                    </div>
-                </article>
-            </a>
-            <a href="pages/la_note_enchantee.html">
-                <article class="resto">
-                    <div class="resto__img--new">
-                        <img src="public/images/restaurants/note.jpg" alt="La note enchantée">
-                    </div>
-                    <div class="resto__descr">
-                        <h3 class="resto__descr_nom">La note enchantée</h3>
-                        <p class="resto__descr_nom">Charonne</p> 
-                        <div class="resto__descr__fav"><i class="far fa-heart"></i></div>             
-                    </div>
-                </article>
-            </a>
-            <a href="pages/a_la_francaise.html">
-                <article class="resto">
-                    <div class="resto__img">
-                        <img src="public/images/restaurants/francaise.jpg" alt="A la Française">
-                    </div>
-                    <div class="resto__descr">
-                        <h3 class="resto__descr_nom">à la française</h3>
-                        <p class="resto__descr_nom">Cité Rouge</p> 
-                        <div class="resto__descr__fav"><i class="far fa-heart"></i></div>
-                    </div>
-                </article>
-            </a>
-            <a href="pages/le_delice_des_sens.html">
-                <article class="resto">
-                    <div class="resto__img">
-                        <img src="public/images/restaurants/delice.jpg" alt="Le délice des sens">
-                    </div>
-                    <div class="resto__descr">
-                        <h3 class="resto__descr_nom">Le délice des sens</h3>
-                        <p class="resto__descr_nom">Folie-Méricourt</p> 
-                        <div class="resto__descr__fav"><i class="far fa-heart"></i></div>                
-                    </div>
-                </article>
-            </a>
+            <div class="list__header"><h2>Restaurants</h2></div>
+            <div class="list__container">
+                <a href="pages/la_palette_du_gout.html">
+                    <article class="bloc">
+                        <div class="bloc__img new">
+                            <img src="public/images/restaurants/palette.jpg" alt="La palette du goût">
+                        </div>
+                        <div class="bloc__descr">
+                            <h3>La palette du goût</h3>
+                            <p>Ménilmontant</p>
+                            <i class="far fa-heart"></i></div>                  
+                        </div>
+                    </article>
+                </a>
+                <a href="pages/la_note_enchantee.html">
+                    <article class="bloc">
+                        <div class="bloc__img new">
+                            <img src="public/images/restaurants/note.jpg" alt="La note enchantée">
+                        </div>
+                        <div class="bloc__descr">
+                            <h3>La note enchantée</h3>
+                            <p>Charonne</p> 
+                            <i class="far fa-heart"></i>          
+                        </div>
+                    </article>
+                </a>
+                <a href="pages/a_la_francaise.html">
+                    <article class="bloc">
+                        <div class="bloc__img">
+                            <img src="public/images/restaurants/francaise.jpg" alt="A la Française">
+                        </div>
+                        <div class="bloc__descr">
+                            <h3>à la française</h3>
+                            <p>Cité Rouge</p> 
+                            <i class="far fa-heart"></i>
+                        </div>
+                    </article>
+                </a>
+                <a href="pages/le_delice_des_sens.html">
+                    <article class="bloc">
+                        <div class="bloc__img">
+                            <img src="public/images/restaurants/delice.jpg" alt="Le délice des sens">
+                        </div>
+                        <div class="bloc__descr">
+                            <h3>Le délice des sens</h3>
+                            <p>Folie-Méricourt</p> 
+                            <i class="far fa-heart"></i>             
+                        </div>
+                    </article>
+                </a>
+            </div>
         </section>
     </div>
     <footer>

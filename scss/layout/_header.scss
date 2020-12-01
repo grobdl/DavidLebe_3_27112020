@@ -1,6 +1,6 @@
 .head {
 	&--main {
-		@include flexbox(wrap, '', '', '');
+		@include flexbox($header--main);
 		& a {
 			display: none;
 		}
@@ -10,7 +10,7 @@
 		}
 	}
 	&--page {
-		@include flexbox(wrap, '', '', center);
+		@include flexbox($header--page);
 		& a {
 			width: 10%;
 		}

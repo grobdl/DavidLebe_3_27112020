@@ -6,6 +6,102 @@ $color-tertiary: #99e2d0;
 
 /* Maps */
 
+$bloc_howto: ();
+$bloc_list: ();
+
+/* Flexbox */
+
+$flex_default: (
+	wrap: wrap,
+	direction: row,
+	content: space-between,
+	align: center,
+);
+
+$flex_howto: (
+	wrap: wrap,
+	direction: column,
+	content: flex-start,
+	align: flex-end,
+);
+
+$flex_form: (
+	wrap: wrap,
+	direction: column,
+	content: flex-start,
+	align: center,
+);
+$flex_list: ();
+
+/* Section header */
+
+$shead_default: (
+	wrap: wrap,
+	direction: column,
+	content: flex-start,
+	align: flex-start,
+);
+
+$shead_howto: (
+	wrap: wrap,
+	direction: column,
+	content: center,
+	align: flex-start,
+);
+
+$shead_form: (
+	wrap: wrap,
+	direction: column,
+	content: flex-start,
+	align: flex-start,
+);
+
+$shead_list: ();
+
+$shead_map: (
+	default: $shead_default,
+	howto: $shead_howto,
+	form: $shead_form,
+	list: $shead_list,
+);
+
+/* suite */
+
+$header--main: (
+	wrap: wrap,
+	direction: row,
+	content: flex-start,
+	align: center,
+);
+
+$header--page: (
+	wrap: wrap,
+	direction: row,
+	content: flex-start,
+	align: center,
+);
+
+$bloc_main: (
+	wrap: wrap,
+	direction: row,
+	content: flex-start,
+	align: stretch,
+);
+$howto_rule: (
+	wrap: wrap,
+	direction: row,
+	content: center,
+	align: center,
+);
+$form_input: (
+	wrap: wrap,
+	direction: row,
+	content: flex-end,
+	align: center,
+);
+
+/*Shadows*/
+
 $btn_shdw: (
 	vh: 5px,
 	hh: 5px,
@@ -19,3 +115,7 @@ $howto_shdw: (
 	blur: 2px,
 	color: lightgrey,
 );
+
+/*section*/
+
+/*blocs*/
