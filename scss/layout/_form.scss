@@ -7,7 +7,6 @@
 		& i {
 			width: 10%;
 		}
-		@include flexbox($form_input);
 		& input {
 			background: none;
 			border: none;

@@ -2,6 +2,12 @@
 	border: 1px solid;
 }
 
+@mixin hidden {
+	&.hidden {
+		display: none;
+	}
+}
+
 @mixin shadows($map) {
 	box-shadow: map-get($map, vh) map-get($btn-shdw, hh)
 		map-get($btn-shdw, blur) map-get($btn-shdw, color);
@@ -21,33 +27,29 @@
 }
 
 @mixin flexbox($map) {
-	display: flex;
-	flex-flow: map-get($map, wrap) map-get($map, direction);
-	justify-content: map-get($map, content);
-	align-items: map-get($map, align);
-}
-
-@mixin section_header($map, $key) {
-	$value: map-get($map, $key);
-	&__header {
-		@include flexbox($value);
-		& > * {
-			width: auto;
-		}
-		& h2 {
-			@if $key == form {
-				text-align: center;
-			} @else {
-				text-align: left;
-			}
+	@each $key, $value in $map {
+		.#{$key} {
+			display: flex;
+			flex-flow: map-get($value, wrap) map-get($value, direction);
+			justify-content: map-get($value, justify);
+			align-items: map-get($value, items);
+			align-content: map-get($value, align);
 		}
 	}
 }
 
-@mixin section($map) {
-	@include flexbox($flexmap);
-	@include section_header($shead_map);
-}
-
-@mixin bloc() {
+@mixin title_containers($main_map, $main_key) {
+	$map: map-get($main_map, $main_key);
+	@each $key, $value in $map {
+		.#{$main_key}__Title {
+			position: relative;
+			& .Title__#{$key} {
+				$element_map: map-get($map, $key);
+				@each $element_key, $element_value in $element_map {
+					#{$element_key}: $element_value;
+				}
+				@include hidden;
+			}
+		}
+	}
 }

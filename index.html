@@ -8,110 +8,126 @@
     <title>Oh My Food! Réservez le menu qui vous convient</title>
 </head>
 <body>
-    <header>
-        <div class="head--main">
-            <a href="../index.html"><i class="fas fa-arrow-left"></i></a>
-            <h1>ohmyfood</h1>
+    <header class="PageHeader">
+        <div class="PageHeader__Title fl_w_ltr_c_c_n">
+            <a class="Title__Element1 hidden" href="../index.html"><i class="fas fa-arrow-left"></i></a>
+            <h1 class="Title__H">ohmyfood</h1>
         </div>
     </header>
-    <div id="content">
-        <section class="form">
-            <div class="form__input">
-                <i class="fas fa-map-marker-alt"></i>
-                <input type="text" value="Paris, Belleville">
+    <main class="MainContent fl_w_ttb_fs_fs_n">
+        <section class="Section fl_w_btt_fs_fs_n">
+            <div class="Section__Title fl_w_ttb_fs_c_n">
+                <h2 class="Title__H">Réservez le menu qui vous convient</h2>
+                <p class="Title__Element">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
             </div>
-            <div class="form__header">
-                <h2>Réservez le menu qui vous convient</h2>
-                <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-            </div>
-            <button class="form__btn">Explorer nos restaurants</button>
+            <form class="Section__Content fl_w_ttb_fs_fs_n">
+                <div class="Form__Input fl_w_ltr_c_fs_n">
+                    <i class="Input__Icon fas fa-map-marker-alt"></i>
+                    <input class="Input__Text" type="text" value="Paris, Belleville">
+                </div>
+                <div class="Form__Submit fl_standard">
+                    <button class="Form__Btn">Explorer nos restaurants</button>
+                </div>
+            </form>
         </section>
-        <section class="howto">
-            <div class="howto__header">
-                <h2>Fonctionnement</h2>
+        <section class="Section fl_w_ttb_fs_fs_n">
+            <div class="Section__Title fl_w_ltr_sb_fs_n">
+                <h2 class="Title__H">Fonctionnement</h2>
             </div>
-            <div class="bloc">
-                <span class="bloc__no">1</span>
-                <div class="bloc__rule">
-                    <i class="fas fa-mobile-alt"></i>
-                    <p>Choisissez un restaurant</p>
+            <div class="Section__Content fl_w_ttb_fs_fs_n">
+                <div class="Bloc fl_standard">
+                    <span class="Bloc__Nbr">1</span>
+                    <div class="Bloc__Rule fl_w_ltr_c_c_n">
+                        <i class="Rule__Icon fas fa-mobile-alt"></i>
+                        <p class="Rule__Txt">Choisissez un restaurant</p>
+                    </div>
                 </div>
-            </div>
-            <div class="bloc">
-                <span class="bloc__no">2</span>
-                <div class="bloc__rule">
-                    <i class="fas fa-list-ul"></i>
-                    <p>Composez votre menu</p>
+                <div class="Bloc fl_standard">
+                    <span class="Bloc__Nbr">2</span>
+                    <div class="Bloc__Rule fl_w_ltr_c_c_n">
+                        <i class="Rule__Icon fas fa-list-ul"></i>
+                        <p class="Rule__Txt">Composez votre menu</p>
+                    </div>
                 </div>
-            </div>
-            <div class="bloc purple">
-                <span class="bloc__no">3</span>
-                <div class="bloc__rule">
-                    <i class="fas fa-store"></i>
-                    <p>Dégustez au restaurant</p>
+                <div class="Bloc--Purple fl_standard">
+                    <span class="Bloc__No">3</span>
+                    <div class="Bloc__Rule fl_w_ltr_c_c_n">
+                        <i class="Rule__Icon fas fa-store"></i>
+                        <p class="Rule__Txt">Dégustez au restaurant</p>
+                    </div>
                 </div>
-            </div>
+            </div>                
         </section>
-        <section class="list">
-            <div class="list__header"><h2>Restaurants</h2></div>
-            <div class="list__container">
+        <section class="Section fl_w_ttb_fs_fs_n">
+            <div class="Section__Title fl_w_ltr_fs_fs_n">
+                <h2 class="Title__H">Restaurants</h2>
+            </div>
+            <div class="Section__Content fl_w_ttb_fs_fs_n">
                 <a href="pages/la_palette_du_gout.html">
-                    <article class="bloc">
-                        <div class="bloc__img new">
-                            <img src="public/images/restaurants/palette.jpg" alt="La palette du goût">
+                    <article class="Bloc fl_w_ttb_fs_s_n">
+                        <div class="Bloc__Img--New">
+                            <img class="Img__Photo" src="public/images/restaurants/palette.jpg" alt="La palette du goût">
+                            <p class="Bloc__New">Nouveau!</p>
                         </div>
-                        <div class="bloc__descr">
-                            <h3>La palette du goût</h3>
-                            <p>Ménilmontant</p>
-                            <i class="far fa-heart"></i></div>                  
+                        <div class="Bloc__Descr fl_w_ttb_fs_fs_s">
+                            <h3 class="Descr__H">La palette du goût</h3>
+                            <p class="Descr__Txt">Ménilmontant</p>
+                            <i class="Descr__Icon far fa-heart"></i></div>                  
                         </div>
                     </article>
                 </a>
                 <a href="pages/la_note_enchantee.html">
-                    <article class="bloc">
-                        <div class="bloc__img new">
-                            <img src="public/images/restaurants/note.jpg" alt="La note enchantée">
+                    <article class="Bloc fl_w_ttb_fs_s_n">
+                        <div class="Bloc__Img--New">
+                            <img class="Img__Photo" src="public/images/restaurants/note.jpg" alt="La note enchantée">
+                            <p class="Bloc__New">Nouveau!</p>
                         </div>
-                        <div class="bloc__descr">
-                            <h3>La note enchantée</h3>
-                            <p>Charonne</p> 
-                            <i class="far fa-heart"></i>          
+                        <div class="Bloc__Descr fl_w_ttb_fs_fs_s">
+                            <h3 class="Descr__H">La note enchantée</h3>
+                            <p class="Descr__Txt">Charonne</p> 
+                            <i class="Descr__Icon far fa-heart"></i>          
                         </div>
                     </article>
                 </a>
                 <a href="pages/a_la_francaise.html">
-                    <article class="bloc">
-                        <div class="bloc__img">
-                            <img src="public/images/restaurants/francaise.jpg" alt="A la Française">
+                    <article class="Bloc fl_w_ttb_fs_s_n">
+                        <div class="Bloc__Img">
+                            <img class="Img__Photo" src="public/images/restaurants/francaise.jpg" alt="A la Française">
+                            <p class="Bloc__New">Nouveau!</p>
                         </div>
-                        <div class="bloc__descr">
-                            <h3>à la française</h3>
-                            <p>Cité Rouge</p> 
-                            <i class="far fa-heart"></i>
+                        <div class="Bloc__Descr fl_w_ttb_fs_fs_s">
+                            <h3 class="Descr__H">à la française</h3>
+                            <p class="Descr__Txt">Cité Rouge</p> 
+                            <i class="Descr__Icon far fa-heart"></i>
                         </div>
                     </article>
                 </a>
                 <a href="pages/le_delice_des_sens.html">
-                    <article class="bloc">
-                        <div class="bloc__img">
-                            <img src="public/images/restaurants/delice.jpg" alt="Le délice des sens">
+                    <article class="Bloc fl_w_ttb_fs_s_n">
+                        <div class="Bloc__Img">
+                            <img class="Img__Photo" src="public/images/restaurants/delice.jpg" alt="Le délice des sens">
+                            <p class="Bloc__New">Nouveau!</p>
                         </div>
-                        <div class="bloc__descr">
-                            <h3>Le délice des sens</h3>
-                            <p>Folie-Méricourt</p> 
-                            <i class="far fa-heart"></i>             
+                        <div class="Bloc__Descr fl_w_ttb_fs_fs_s">
+                            <h3 class="Descr__H">Le délice des sens</h3>
+                            <p class="Descr__Txt">Folie-Méricourt</p> 
+                            <i class="Descr__Icon far fa-heart"></i>             
                         </div>
                     </article>
                 </a>
             </div>
         </section>
-    </div>
-    <footer>
-        <div class="logo--foot">ohmyfood</div>
-        <a href="#"><i class="fas fa-ustensils"></i> Proposer un restaurant</a>
-        <a href="#"><i class="fas fa-hands-helping"></i> Devenir partenaire</a>
-        <a href="#">Mentions légales</a>
-        <a href="#">Contact</a>
+    </main>
+    <footer class="PageFooter fl_w_ttb_fs_fs_n">
+        <div class="PageFooter__Title">
+            <h2 class="Title_H">ohmyfood</h2>
+        </div>
+        <div class="PageFooter__Content">
+            <a class="Content__Link" href="#"><i class="fas fa-ustensils"></i> Proposer un restaurant</a>
+            <a class="Content__Link" href="#"><i class="fas fa-hands-helping"></i> Devenir partenaire</a>
+            <a class="Content__Link" href="#">Mentions légales</a>
+            <a class="Content__Link" href="#">Contact</a>
+        </div>
     </footer>
 </body>
 </html>

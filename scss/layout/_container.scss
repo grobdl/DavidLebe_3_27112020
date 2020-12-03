@@ -1,53 +1,36 @@
-section {
-	padding: 0px 15px 0px 15px;
-	& > * {
-		padding: 10px 15px 10px 15px;
+.MainContent {
+}
+
+.Section {
+	&__Title {
+	}
+	&__Content {
 	}
 }
 
-.form {
-	@include flexbox($flex_form);
-	@include section_header($shead_map, form);
+.Title {
+	&__H {
+	}
+	&__Elem {
+	}
 }
 
-.howto {
-	@include flexbox($flex_howto);
-	@include section_header($shead_map, howto);
-	& .bloc {
-		position: relative;
-		@include flexbox($bloc_main);
-		@include shadows($howto_shdw);
-		width: calc(95% - 15px);
-		border-radius: 10px;
-		background: #f2f2f2;
-		margin: 10px 0px 10px 0px;
-		padding: 15px 0px 15px 0px;
-		&.purple {
-			background: enlight($color-primary, 35);
-		}
-		&__no {
-			position: absolute;
-			left: -12px;
-			top: calc(50% - 10px);
-			width: 1.5em;
-			height: 1.5em;
-			background: $color-primary;
-			color: white;
-			border-radius: 50%;
-		}
-		&__rule {
-			@include flexbox($howto_rule);
-			& > * {
-				width: auto;
-				padding: 0px 5px 0px 5px;
-				margin-block-start: 0em;
-			}
+.Bloc {
+	&__Nbr {
+	}
+	&__Rule {
+	}
+	&--Purple {
+	}
+	&__Img {
+		&--New {
 		}
 	}
 }
 
-.list {
-	& h2 {
-		text-align: left;
+.Rule {
+	&__Icon {
+	}
+	&__Txt {
 	}
 }

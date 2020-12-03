@@ -1,11 +1,8 @@
 /* Variables */
 /* Maps */
 /* Flexbox */
-/* Section header */
-/* suite */
+/* Containers */
 /*Shadows*/
-/*section*/
-/*blocs*/
 body {
   max-width: 480px;
   min-width: 360px;
@@ -16,12 +13,92 @@ body {
 * {
   box-sizing: border-box;
   text-transform: capitalize;
-  width: 100%;
   text-align: center;
+  width: 100%;
 }
 
 a {
   display: inline-block;
+}
+
+.fl_standard {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: normal;
+}
+
+.fl_w_ltr_c_c_n {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  align-items: center;
+  align-content: normal;
+}
+
+.fl_w_ltr_c_fs_n {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: normal;
+}
+
+.fl_w_ltr_fs_c_n {
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: normal;
+}
+
+.fl_w_ltr_sb_fs_n {
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: normal;
+}
+
+.fl_w_btt_fs_fs_n {
+  display: flex;
+  flex-flow: wrap column-reverse;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: normal;
+}
+
+.fl_w_ttb_fs_c_n {
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: normal;
+}
+
+.fl_w_ttb_fs_fs_n {
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: normal;
+}
+
+.fl_w_ttb_fs_fs_s {
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: stretch;
+}
+
+.fl_w_ttb_fs_s_n {
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: normal;
 }
 
 @font-face {
@@ -64,92 +141,6 @@ p {
   margin-block-start: 0.2em;
 }
 
-section {
-  padding: 0px 15px 0px 15px;
-}
-section > * {
-  padding: 10px 15px 10px 15px;
-}
-
-.form {
-  display: flex;
-  flex-flow: wrap column;
-  justify-content: flex-start;
-  align-items: center;
-}
-.form__header {
-  display: flex;
-  flex-flow: wrap column;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-.form__header > * {
-  width: auto;
-}
-.form__header h2 {
-  text-align: center;
-}
-
-.howto {
-  display: flex;
-  flex-flow: wrap column;
-  justify-content: flex-start;
-  align-items: flex-end;
-}
-.howto__header {
-  display: flex;
-  flex-flow: wrap column;
-  justify-content: center;
-  align-items: flex-start;
-}
-.howto__header > * {
-  width: auto;
-}
-.howto__header h2 {
-  text-align: left;
-}
-.howto .bloc {
-  position: relative;
-  display: flex;
-  flex-flow: wrap row;
-  justify-content: flex-start;
-  align-items: stretch;
-  box-shadow: 5px 5px 2px lightgrey;
-  width: calc(95% - 15px);
-  border-radius: 10px;
-  background: #f2f2f2;
-  margin: 10px 0px 10px 0px;
-  padding: 15px 0px 15px 0px;
-}
-.howto .bloc.purple {
-  background: #f2eafb;
-}
-.howto .bloc__no {
-  position: absolute;
-  left: -12px;
-  top: calc(50% - 10px);
-  width: 1.5em;
-  height: 1.5em;
-  background: #9356dc;
-  color: white;
-  border-radius: 50%;
-}
-.howto .bloc__rule {
-  display: flex;
-  flex-flow: wrap row;
-  justify-content: center;
-  align-items: center;
-}
-.howto .bloc__rule > * {
-  width: auto;
-  padding: 0px 5px 0px 5px;
-  margin-block-start: 0em;
-}
-
-.list h2 {
-  text-align: left;
-}
-
 .form {
   background: #f2f2f2;
   padding: 0px 0px 80px 0px;
@@ -157,10 +148,6 @@ section > * {
 }
 .form__input {
   background: lightgrey;
-  display: flex;
-  flex-flow: wrap row;
-  justify-content: flex-end;
-  align-items: center;
 }
 .form__input i {
   width: 10%;
@@ -183,31 +170,27 @@ section > * {
   box-shadow: 5px 5px 2px lightgrey;
 }
 
-.head--main {
-  display: flex;
-  flex-flow: wrap row;
-  justify-content: flex-start;
-  align-items: center;
+.PageHeader__Title {
+  position: relative;
 }
-.head--main a {
+.PageHeader__Title .Title__Element1 {
+  width: auto;
+  position: absolute;
+  top: 40%;
+  left: 3%;
+}
+.PageHeader__Title .Title__Element1.hidden {
   display: none;
 }
-.head--main h1 {
+
+.PageHeader__Title {
+  position: relative;
+}
+.PageHeader__Title .Title__H {
   width: 100%;
-  margin: 0;
 }
-.head--page {
-  display: flex;
-  flex-flow: wrap row;
-  justify-content: flex-start;
-  align-items: center;
-}
-.head--page a {
-  width: 10%;
-}
-.head--page h1 {
-  width: 90%;
-  margin: 0;
+.PageHeader__Title .Title__H.hidden {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

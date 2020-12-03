@@ -6,98 +6,121 @@ $color-tertiary: #99e2d0;
 
 /* Maps */
 
-$bloc_howto: ();
-$bloc_list: ();
-
 /* Flexbox */
 
-$flex_default: (
+$flex_standard: (
 	wrap: wrap,
 	direction: row,
-	content: space-between,
-	align: center,
+	justify: flex-start,
+	items: flex-start,
+	align: normal,
 );
 
-$flex_howto: (
-	wrap: wrap,
-	direction: column,
-	content: flex-start,
-	align: flex-end,
-);
-
-$flex_form: (
-	wrap: wrap,
-	direction: column,
-	content: flex-start,
-	align: center,
-);
-$flex_list: ();
-
-/* Section header */
-
-$shead_default: (
-	wrap: wrap,
-	direction: column,
-	content: flex-start,
-	align: flex-start,
-);
-
-$shead_howto: (
-	wrap: wrap,
-	direction: column,
-	content: center,
-	align: flex-start,
-);
-
-$shead_form: (
-	wrap: wrap,
-	direction: column,
-	content: flex-start,
-	align: flex-start,
-);
-
-$shead_list: ();
-
-$shead_map: (
-	default: $shead_default,
-	howto: $shead_howto,
-	form: $shead_form,
-	list: $shead_list,
-);
-
-/* suite */
-
-$header--main: (
+$flex_w_ltr_c_c_n: (
 	wrap: wrap,
 	direction: row,
-	content: flex-start,
-	align: center,
+	justify: center,
+	items: center,
+	align: normal,
 );
 
-$header--page: (
+$flex_w_ltr_c_fs_n: (
 	wrap: wrap,
 	direction: row,
-	content: flex-start,
-	align: center,
+	justify: center,
+	items: flex-start,
+	align: normal,
 );
 
-$bloc_main: (
+$flex_w_ltr_fs_c_n: (
 	wrap: wrap,
 	direction: row,
-	content: flex-start,
+	justify: flex-start,
+	items: center,
+	align: normal,
+);
+
+$flex_w_ltr_sb_fs_n: (
+	wrap: wrap,
+	direction: column,
+	justify: space-between,
+	items: flex-start,
+	align: normal,
+);
+
+$flex_w_btt_fs_fs_n: (
+	wrap: wrap,
+	direction: column-reverse,
+	justify: flex-start,
+	items: flex-start,
+	align: normal,
+);
+
+$flex_w_ttb_fs_c_n: (
+	wrap: wrap,
+	direction: column,
+	justify: flex-start,
+	items: center,
+	align: normal,
+);
+
+$flex_w_ttb_fs_fs_n: (
+	wrap: wrap,
+	direction: column,
+	justify: flex-start,
+	items: flex-start,
+	align: normal,
+);
+
+$flex_w_ttb_fs_fs_s: (
+	wrap: wrap,
+	direction: column,
+	justify: flex-start,
+	items: flex-start,
 	align: stretch,
 );
-$howto_rule: (
+
+$flex_w_ttb_fs_s_n: (
 	wrap: wrap,
-	direction: row,
-	content: center,
-	align: center,
+	direction: column,
+	justify: flex-start,
+	items: stretch,
+	align: normal,
 );
-$form_input: (
-	wrap: wrap,
-	direction: row,
-	content: flex-end,
-	align: center,
+
+$flexmap_list: (
+	fl_standard: $flex_standard,
+	fl_w_ltr_c_c_n: $flex_w_ltr_c_c_n,
+	fl_w_ltr_c_fs_n: $flex_w_ltr_c_fs_n,
+	fl_w_ltr_fs_c_n: $flex_w_ltr_fs_c_n,
+	fl_w_ltr_sb_fs_n: $flex_w_ltr_sb_fs_n,
+	fl_w_btt_fs_fs_n: $flex_w_btt_fs_fs_n,
+	fl_w_ttb_fs_c_n: $flex_w_ttb_fs_c_n,
+	fl_w_ttb_fs_fs_n: $flex_w_ttb_fs_fs_n,
+	fl_w_ttb_fs_fs_s: $flex_w_ttb_fs_fs_s,
+	fl_w_ttb_fs_s_n: $flex_w_ttb_fs_s_n,
+);
+/* Containers */
+
+$PageHeader: (
+	Element1: (
+		width: auto,
+		position: absolute,
+		top: 40%,
+		left: 3%,
+	),
+	H: (
+		width: 100%,
+	),
+);
+
+$Section: ();
+$PageFooter: ();
+
+$contmap_list: (
+	PageHeader: $PageHeader,
+	Section: $Section,
+	PageFooter: $PageFooter,
 );
 
 /*Shadows*/
@@ -115,7 +138,3 @@ $howto_shdw: (
 	blur: 2px,
 	color: lightgrey,
 );
-
-/*section*/
-
-/*blocs*/
