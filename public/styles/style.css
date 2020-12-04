@@ -183,13 +183,13 @@ p {
   display: none;
 }
 
-.PageHeader__Title {
+.PageHeader__Title__Title {
   position: relative;
 }
-.PageHeader__Title .Title__H {
+.PageHeader__Title__Title .Title__H {
   width: 100%;
 }
-.PageHeader__Title .Title__H.hidden {
+.PageHeader__Title__Title .Title__H.hidden {
   display: none;
 }
 

@@ -2,6 +2,12 @@
 	border: 1px solid;
 }
 
+@mixin rule_maker($map){
+	@each $key, $value in $map{
+		#{$key}: $value;
+	}
+}
+
 @mixin hidden {
 	&.hidden {
 		display: none;
@@ -41,15 +47,17 @@
 @mixin title_containers($main_map, $main_key) {
 	$map: map-get($main_map, $main_key);
 	@each $key, $value in $map {
-		.#{$main_key}__Title {
+		$main_key: #{$main_key}__Title;
+		.#{$main_key} {
 			position: relative;
 			& .Title__#{$key} {
 				$element_map: map-get($map, $key);
-				@each $element_key, $element_value in $element_map {
-					#{$element_key}: $element_value;
-				}
+				@include rule_maker($element_map);
 				@include hidden;
 			}
+		}
+		.#{$main_key}__Content{
+
 		}
 	}
 }
