@@ -1,13 +1,3 @@
-/* Variables */
-
-$color-primary: #9356dc;
-$color-secondary: #ff79da;
-$color-tertiary: #99e2d0;
-
-/* Maps */
-
-/* Flexbox */
-
 $flex_standard: (
 	wrap: wrap,
 	direction: row,
@@ -99,51 +89,4 @@ $flexmap_list: (
 	fl_w_ttb_fs_fs_n: $flex_w_ttb_fs_fs_n,
 	fl_w_ttb_fs_fs_s: $flex_w_ttb_fs_fs_s,
 	fl_w_ttb_fs_s_n: $flex_w_ttb_fs_s_n,
-);
-/* Containers */
-
-$PageHeader: (
-	Element1: (
-		width: auto,
-		position: absolute,
-		top: 40%,
-		left: 3%,
-	),
-	H: (
-		width: 100%,
-	),
-);
-
-$Form__Input: (
-	Icon: (
-		width: 40%,
-	),
-	Text: (
-		width: 60%,
-	),
-);
-
-$Section: ();
-$PageFooter: ();
-
-$contmap_list: (
-	PageHeader: $PageHeader,
-	Section: $Section,
-	PageFooter: $PageFooter,
-);
-
-/*Shadows*/
-
-$btn_shdw: (
-	vh: 5px,
-	hh: 5px,
-	blur: 2px,
-	color: lightgrey,
-);
-
-$howto_shdw: (
-	vh: 5px,
-	hh: 5px,
-	blur: 2px,
-	color: lightgrey,
 );

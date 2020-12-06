@@ -2,15 +2,25 @@
 	border: 1px solid;
 }
 
-@mixin rule_maker($map){
+@mixin position_maker($map){
 	@each $key, $value in $map{
-		#{$key}: $value;
+		.#{$key}{
+			$posmap: map-get($map, $key);
+			position: absolute;
+			@each $posmap_key, $posmap_value in $posmap{
+				#{$posmap_key} : $posmap_value;
+
+			}
+		}
+		
 	}
 }
 
-@mixin hidden {
-	&.hidden {
-		display: none;
+@mixin rule_maker($map){
+	@each $key, $value in $map{
+		@if ($key != elements){
+			#{$key}: $value;
+		}
 	}
 }
 
@@ -20,7 +30,6 @@
 }
 
 @mixin btn {
-	&__btn {
 		width: 60%;
 		border-radius: 20px;
 		cursor: pointer;
@@ -29,7 +38,6 @@
 		outline: none;
 		color: white;
 		@include shadows($btn_shdw);
-	}
 }
 
 @mixin flexbox($map) {
@@ -44,20 +52,19 @@
 	}
 }
 
-@mixin title_containers($main_map, $main_key) {
-	$map: map-get($main_map, $main_key);
-	@each $key, $value in $map {
-		$main_key: #{$main_key}__Title;
-		.#{$main_key} {
-			position: relative;
-			& .Title__#{$key} {
-				$element_map: map-get($map, $key);
-				@include rule_maker($element_map);
-				@include hidden;
+@mixin BEM_maker($BlockMap_List, $BlockMap_key) {
+	$Block: map-get($BlockMap_List, $BlockMap_key);
+	.#{$BlockMap_key}{
+		@include rule_maker($Block);
+		$ElementsMap: map-get($Block, elements);
+		@each $Elements_key, $Elements_value in $ElementsMap{
+			&__#{$Elements_key}{
+				@if($Elements_key == 'Btn'){
+					@include btn;
+				}@else{
+					@include rule_maker($Elements_value);					
+				}
 			}
-		}
-		.#{$main_key}__Content{
-
 		}
 	}
 }
