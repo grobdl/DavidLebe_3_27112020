@@ -3,24 +3,10 @@
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
-
-/* Positions */
-$pos_title__element1: (top: 40%, left: 5%);
-
-$posmap_list: (
-	title__element1: $pos_title__element1,
-);
+$background-color-1: grey;
+$background-color-2: darkgrey;
 
 /* Containers */
-$BlockMap_List: (
-	HeadTitle: (elements: (Element1: (width: auto))),
-	SectionTitle: (),
-	FormInput: (position: relative, background: grey, elements: (Btn: (), Icon: (width: 40%, text-align: right), Txt: (width: 60%, Text-align: left, background: none, border: none))),
-	FormSubmit: (),
-	Bloc:(),
-	FootTitle: (),
-	FootContent: ()
-);
 
 /*Shadows*/
 
@@ -41,9 +27,13 @@ $howto_shdw: (
 /*position maker maps*/
 
 $abspct_40_nc_nc_5: (top: 40%, left: 5% );
-$abspx_nc_nc_-130_nc: (bottom: -130px);
+$abspct_nc_nc_nc_10: (left: 10%);
+$absem_nc_nc_-11_nc: (bottom: -11em);
+$absem_nc_nc_nc_-1: (left: -1em);
 
 $posmap_list: (
 	abspct_40_nc_nc_5: $abspct_40_nc_nc_5,
-	abspx_nc_nc_-130_nc: $abspx_nc_nc_-130_nc
+	abspct_nc_nc_nc_10: $abspct_nc_nc_nc_10,
+	absem_nc_nc_nc_-1: $absem_nc_nc_nc_-1,
+	absem_nc_nc_-11_nc: $absem_nc_nc_-11_nc
 )

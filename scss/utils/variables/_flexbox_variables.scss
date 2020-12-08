@@ -54,6 +54,14 @@ $flex_w_ttb_fs_c_n: (
 	align: normal,
 );
 
+$fl_w_ttb_fs_fe_n: (
+	wrap: wrap,
+	direction: column,
+	justify: flex-start,
+	items: flex-end,
+	align: normal
+);
+
 $flex_w_ttb_fs_fs_n: (
 	wrap: wrap,
 	direction: column,
@@ -86,6 +94,7 @@ $flexmap_list: (
 	fl_w_ltr_sb_fs_n: $flex_w_ltr_sb_fs_n,
 	fl_w_btt_fs_fs_n: $flex_w_btt_fs_fs_n,
 	fl_w_ttb_fs_c_n: $flex_w_ttb_fs_c_n,
+	fl_w_ttb_fs_fe_n: $fl_w_ttb_fs_fe_n,
 	fl_w_ttb_fs_fs_n: $flex_w_ttb_fs_fs_n,
 	fl_w_ttb_fs_fs_s: $flex_w_ttb_fs_fs_s,
 	fl_w_ttb_fs_s_n: $flex_w_ttb_fs_s_n,

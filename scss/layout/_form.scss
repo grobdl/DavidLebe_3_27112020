@@ -1,2 +1,17 @@
-@include BEM_maker($BlockMap_List, FormInput);
-
+.FormInput{
+    @include block_padding();
+    position: relative;
+    background: $background-color-1;
+    &__Icon{
+        width: 40%;
+        text-align: right;
+    }
+    &__Txt{
+        width: 60%;
+        text-align: left;
+        background: none;
+        border: none;
+    }
+    @include btn();
+}
+		

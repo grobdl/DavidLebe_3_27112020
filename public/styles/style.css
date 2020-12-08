@@ -39,7 +39,6 @@ p {
 }
 
 /* Variables */
-/* Positions */
 /* Containers */
 /*Shadows*/
 /*position maker maps*/
@@ -59,6 +58,10 @@ body {
 
 a {
   display: inline-block;
+}
+
+.Option {
+  width: 10%;
 }
 
 .relative {
@@ -125,6 +128,14 @@ a {
   align-content: normal;
 }
 
+.fl_w_ttb_fs_fe_n {
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  align-content: normal;
+}
+
 .fl_w_ttb_fs_fs_n {
   display: flex;
   flex-flow: wrap column;
@@ -155,29 +166,72 @@ a {
   left: 5%;
 }
 
-.abspx_nc_nc_-130_nc {
+.abspct_nc_nc_nc_10 {
   position: absolute;
-  bottom: -130px;
+  left: 10%;
 }
 
-.form_bckgd {
+.absem_nc_nc_nc_-1 {
+  position: absolute;
+  left: -1em;
+}
+
+.absem_nc_nc_-11_nc {
+  position: absolute;
+  bottom: -11em;
+}
+
+.Section__Content {
+  padding: 0em 1em 0em 1em;
+}
+.Section__Content > * {
+  margin-bottom: 1em;
+}
+
+.TallerBckgd {
   background: lightgrey;
-  padding: 0px 0px 80px 0px;
+  padding: 0px 0px 150px 0px;
+}
+
+.purple {
+  background: #e4d5f6;
+}
+
+.BlocRule {
+  position: relative;
+  width: 85%;
+  border-radius: 15px;
+  background: #f2f2f2;
+  padding: 1.5em 0em 1.5em 0em;
+}
+.BlocRule__No {
+  width: auto;
+  background: #9356dc;
+  border-radius: 50%;
+  padding: 0.5em 0.75em 0.5em 0.75em;
+  font-weight: bold;
+  color: white;
+}
+.BlocRule__Icon {
+  width: 10%;
+  text-align: center;
+  line-height: 100%;
+}
+.BlocRule__Txt {
+  font-weight: bold;
+  line-height: 100%;
+}
+
+.BlocImg {
+  border-radius: 15px 15px 0px 0px;
+  height: 250px;
+  object-fit: cover;
 }
 
 .FormInput {
+  padding: 1em;
   position: relative;
   background: grey;
-}
-.FormInput__Btn {
-  width: 60%;
-  border-radius: 20px;
-  cursor: pointer;
-  border: none;
-  background: linear-gradient(-5deg, #9356dc, #ff79da);
-  outline: none;
-  color: white;
-  box-shadow: 5px 5px 2px lightgrey;
 }
 .FormInput__Icon {
   width: 40%;
@@ -185,13 +239,20 @@ a {
 }
 .FormInput__Txt {
   width: 60%;
-  Text-align: left;
+  text-align: left;
   background: none;
   border: none;
 }
-
-.HeadTitle__Element1 {
-  width: auto;
+.FormInput__Btn {
+  padding: 1em;
+  box-shadow: 5px 5px 2px lightgrey;
+  width: 60%;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(-5deg, #9356dc, #ff79da);
+  outline: none;
+  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

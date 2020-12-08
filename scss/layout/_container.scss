@@ -1,10 +1,50 @@
+
 .MainContent {
 }
 
-.SectionContent{
+.Section__Content{
+    padding: 0em 1em 0em 1em;
+    & > * {
+        margin-bottom: 1em;
+    }
 }
 
-.form_bckgd{
+.TallerBckgd{
     background: lightgrey;
-    padding: 0px 0px 80px 0px;
+    padding: 0px 0px 150px 0px;
+}
+
+.purple{
+    background: enlight($color-primary, 30);
+}
+
+.BlocRule{
+    position: relative;
+    width: 85%;
+    border-radius: 15px;
+    background: #f2f2f2;
+    padding: 1.5em 0em 1.5em 0em;
+    &__No{
+        width: auto;
+        background: $color-primary;
+        border-radius: 50%;
+        padding: 0.5em 0.75em 0.5em 0.75em;
+        font-weight: bold;
+        color: white
+    }
+    &__Icon{
+        width: 10%;
+        text-align: center;
+        line-height: 100%;
+    }
+    &__Txt{
+        font-weight: bold;
+        line-height: 100%;
+    }
+}
+
+.BlocImg{
+    border-radius: 15px 15px 0px 0px;
+    height: 250px;
+    object-fit: cover;
 }
