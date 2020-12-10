@@ -8,34 +8,32 @@
     <title>Oh My Food! Réservez le menu qui vous convient</title>
 </head>
 <body>
-    <header>
-        <div class="head-title">
-            <a class="head-title__A headTitle__A_hidden" href="../index.html"><i class="fas fa-arrow-left"></i></a>
+    <header class="head-title">
+            <a class="head-title__a head-title__a_hidden" href="../index.html"><i class="fas fa-arrow-left"></i></a>
             <h1 class="head-title__h1">ohmyfood</h1>
-        </div>
     </header>
     <main class="index-content">
-        <section class="section section_bottomExtend">
+        <section class="section section_bottomExtend section_bckgdGrey">
             <form class="searchBox">
                 <i class="searchBox__icon fas fa-map-marker-alt"></i>
-                <input class="searchBox__p" type="text" placeholder="Où souhaitez-vous manger?">
+                <input class="searchBox__input" type="text" placeholder="Où souhaitez-vous manger?">
             </form>
             <div class="section-title">
                 <h2 class="section-title__h2">Réservez le menu qui vous convient</h2>
                 <p class="section-title__p">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+                <button class="section-title__btn">Explorer nos restaurants</button>
             </div>
-            <button class="searchBox__btn">Explorer nos restaurants</button>
         </section>
         <section class="section">
             <div class="section-title">
                 <h2 class="section-title__h2">Fonctionnement</h2>
             </div>
-            <ol class="section-content">
+            <ol class="section-content section-content_flexEnd">
                 <li class="how-to">
                     <i class="how-to__icon fas fa-mobile-alt"></i>
                     <p class="how-to__p">Choisissez un restaurant</p>
                 </li>
-                <li class="howTo">
+                <li class="how-to">
                     <i class="how-to__icon fas fa-list-ul"></i>
                     <p class="how-to__p">Composez votre menu</p>
                 </li>
@@ -53,40 +51,41 @@
                 <a href="pages/la_palette_du_gout.html">
                 <article class="bloc-rest bloc-rest_new">
                     <img class="bloc-rest__img" src="public/images/restaurants/palette.jpg" alt="La palette du goût">
-                    <div class="descr">
+                    <aside class="descr">
                         <h3 class="descr__h3">La palette du goût</h3>
                         <p class="descr__p">Ménilmontant</p>
-                        <i class="descr__icon far fa-heart"></i></div>                  
+                        <i class="descr__icon far fa-heart"></i>
+                    </aside>                  
                 </article>
                 </a>
                 <a href="pages/la_note_enchantee.html">
                     <article class="bloc-rest bloc-rest_new">
                         <img class="bloc-rest__img" src="public/images/restaurants/note.jpg" alt="La note enchantée">
-                        <div class="descr">
+                        <aside class="descr">
                             <h3 class="descr__h3">La note enchantée</h3>
                             <p class="descr__p">Charonne</p> 
                             <i class="descr__icon"></i>          
-                        </div>
+                        </aside>
                     </article>
                 </a>
                 <a href="pages/a_la_francaise.html">
                     <article class="bloc-rest">
                         <img class="bloc-rest__img" src="public/images/restaurants/francaise.jpg" alt="A la Française">
-                        <div class="bloc-rest__descr fl_w_ttb_fs_fs_s">
+                        <aside class="bloc-rest__descr fl_w_ttb_fs_fs_s">
                             <h3 class="descr_h3">à la française</h3>
                             <p class="descr_p">Cité Rouge</p> 
                             <i class="descr_icon far fa-heart"></i>
-                        </div>
+                        </aside>
                     </article>
                 </a>
                 <a href="pages/le_delice_des_sens.html">
                     <article class="bloc-rest">
                         <img class="bloc-img" src="public/images/restaurants/delice.jpg" alt="Le délice des sens">
-                        <div class="bloc-descr fl_w_ttb_fs_fs_s">
+                        <aside class="bloc-descr fl_w_ttb_fs_fs_s">
                             <h3 class="descr_h3">Le délice des sens</h3>
                             <p class="descr_p">Folie-Méricourt</p> 
                             <i class="descr_icon far fa-heart"></i>             
-                        </div>
+                        </aside>
                     </article>
                 </a>
             </div>
@@ -97,10 +96,10 @@
             <h2 class="foot-title__h2">ohmyfood</h2>
         </div>
         <div class="foot-content">
-            <a class="foot-content__link" href="#"><i class="fas fa-ustensils"></i> Proposer un restaurant</a>
-            <a class="foot-content__link" href="#"><i class="fas fa-hands-helping"></i> Devenir partenaire</a>
-            <a class="foot-content__link" href="#">Mentions légales</a>
-            <a class="foot-content__link" href="#">Contact</a>
+            <a class="foot-content__a" href="#"><i class="fas fa-ustensils"></i> Proposer un restaurant</a>
+            <a class="foot-content__a" href="#"><i class="fas fa-hands-helping"></i> Devenir partenaire</a>
+            <a class="foot-content__a" href="#">Mentions légales</a>
+            <a class="foot-content__a" href="#">Contact</a>
         </div>
     </footer>
 </body>

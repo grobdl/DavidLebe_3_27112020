@@ -2,76 +2,15 @@
 	border: 1px solid;
 }
 
-@mixin position_maker($map){
-	@each $key, $value in $map{
-		.#{$key}{
-			$posmap: map-get($map, $key);
-			position: absolute;
-			@each $posmap_key, $posmap_value in $posmap{
-				#{$posmap_key} : $posmap_value;
-
-			}
-		}
-		
-	}
-}
-
-@mixin rule_maker($map){
-	@each $key, $value in $map{
-		@if ($key != elements){
-			#{$key}: $value;
-		}
-	}
-}
-
-@mixin block_padding(){
+@mixin block-padding(){
 	padding: 1em;
 }
 
-@mixin shadows($map) {
-	box-shadow: map-get($map, vh) map-get($btn-shdw, hh)
-		map-get($btn-shdw, blur) map-get($btn-shdw, color);
+@mixin flex($direction){
+	display: flex;
+	flex-flow: $direction wrap;
 }
 
-@mixin btn {
-	&__Btn{
-		@include block_padding();
-		@include shadows($btn_shdw);
-		width: 60%;
-		border-radius: 20px;
-		cursor: pointer;
-		border: none;
-		background: linear-gradient(-5deg, $color-primary, $color-secondary);
-		outline: none;
-		color: white;
-	}
-}
-
-@mixin flexbox($map) {
-	@each $key, $value in $map {
-		.#{$key} {
-			display: flex;
-			flex-flow: map-get($value, wrap) map-get($value, direction);
-			justify-content: map-get($value, justify);
-			align-items: map-get($value, items);
-			align-content: map-get($value, align);
-		}
-	}
-}
-
-@mixin BEM_maker($BlockMap_List, $BlockMap_key) {
-	$Block: map-get($BlockMap_List, $BlockMap_key);
-	.#{$BlockMap_key}{
-		@include rule_maker($Block);
-		$ElementsMap: map-get($Block, elements);
-		@each $Elements_key, $Elements_value in $ElementsMap{
-			&__#{$Elements_key}{
-				@if($Elements_key == 'Btn'){
-					@include btn;
-				}@else{
-					@include rule_maker($Elements_value);					
-				}
-			}
-		}
-	}
+@mixin block-shadow{
+	box-shadow: 5px 5px 2px $shadow-color;
 }

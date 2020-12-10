@@ -1,8 +1,16 @@
-.headTitle{
-    &__A{
+.head-title{
+    position: relative;
+    &__a{
+        position: absolute;
+        top: 1em;
+        left: 0em;
         width: 10%;
         &_hidden{
-            display:none
+            display:none;
         }
     }
+    &__h1{
+
+    }
 }
+

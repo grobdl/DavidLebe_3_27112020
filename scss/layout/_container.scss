@@ -1,50 +1,117 @@
-
-.MainContent {
+.section{
+    &_bottomExtend{
+        padding-bottom: 2.5em;
+    }
+    &_bckgdGrey{
+        background: $color-background-light;
+    }
 }
 
-.Section__Content{
+.section-title{
+    @include flex(column);
+    @include block_padding();
+    align-items: center;
+    &__h2{
+        &_textLeft{
+            text-align: left;
+        } 
+    }
+    &__p{
+
+    }
+    &__btn{
+        @include block-padding();
+        @include block-shadow();
+        margin: 1em 0em 1em 0em;
+		width: 60%;
+		border-radius: 20px;
+		cursor: pointer;
+		border: none;
+		background: linear-gradient(-5deg, $color-primary, $color-secondary);
+		outline: none;
+		color: white;
+    }
+}
+
+.section-content{
+    @include flex(column);
     padding: 0em 1em 0em 1em;
+    counter-reset: how-to;
+    list-style: none;
     & > * {
         margin-bottom: 1em;
     }
+    &_flexEnd{
+        align-items: flex-end;
+    }
 }
 
-.TallerBckgd{
-    background: lightgrey;
-    padding: 0px 0px 150px 0px;
-}
-
-.purple{
-    background: enlight($color-primary, 30);
-}
-
-.BlocRule{
+.how-to{
+    @include block-shadow();
+    @include flex(row);
+    align-items: center;
     position: relative;
-    width: 85%;
+    width: 90%;
     border-radius: 15px;
-    background: #f2f2f2;
-    padding: 1.5em 0em 1.5em 0em;
-    &__No{
-        width: auto;
+    background: $color-background-light;
+    padding: 1.5em;
+    &::before{
+        position: absolute;
+        counter-increment: how-to;
+        content: counter(how-to);
+        left:-1em;
         background: $color-primary;
+        padding: 0.25em 0.75em 0.25em 0.75em;
         border-radius: 50%;
-        padding: 0.5em 0.75em 0.5em 0.75em;
+        color: white;
         font-weight: bold;
-        color: white
     }
-    &__Icon{
-        width: 10%;
-        text-align: center;
-        line-height: 100%;
+    &__icon{
+        width: 30%;
     }
-    &__Txt{
-        font-weight: bold;
-        line-height: 100%;
+    &__p{
+        width: 70%;
+        text-align: left;
+    }
+    &_purple{
+        background: enlight($color-primary, 30);
     }
 }
 
-.BlocImg{
-    border-radius: 15px 15px 0px 0px;
-    height: 250px;
-    object-fit: cover;
+.bloc-rest{
+    position: relative;
+    @include flex(column);
+    height: 300px;
+    border-radius: 15px;
+    &__img{
+        height: 200px;
+        object-fit: contain;
+    }
+    & .descr{
+        @include flex(column);
+        &__h3, .descr__p{
+            width: 90%;
+            text-align: left;
+        }
+        &__h3{
+            font-weight: bold;
+        }
+        &__icon{
+            width: 10%;
+            &_liked{
+
+            }
+        }
+    }
+    &_new{
+        &::before{
+            content: "Nouveau";
+            position: absolute;
+            top: 10%;
+            right: 10%;
+            padding: 0.25em;
+            background-color: $color-background-new;
+            color: $color-new;
+        }
+    }
 }

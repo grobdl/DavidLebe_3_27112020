@@ -3,14 +3,18 @@
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
-$background-color-1: grey;
-$background-color-2: darkgrey;
+$color-background-dark: grey;
+$color-background-normal: darkgrey;
+$color-background-light: lightgrey;
+$color-background-new: lightgreen;
+$color-new: darkgreen;
+$shadow-color: grey;
 
 /* Containers */
 
 /*Shadows*/
 
-$btn_shdw: (
+$_shdw: (
 	vh: 5px,
 	hh: 5px,
 	blur: 2px,

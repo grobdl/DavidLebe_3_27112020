@@ -1,17 +1,21 @@
-.FormInput{
-    @include block_padding();
-    position: relative;
-    background: $background-color-1;
-    &__Icon{
-        width: 40%;
+.searchBox{
+    @include flex(row);
+    @include block-padding();
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient($color-background-dark 3%, $color-background-normal 10%);
+    &__icon{
         text-align: right;
+        width: 30%;
     }
-    &__Txt{
-        width: 60%;
-        text-align: left;
-        background: none;
+    &__input{
+        outline: none;
         border: none;
+        background: none;
+        text-align: left;
+        width: 70%;
+        &::placeholder{
+            color: black;
+        }
     }
-    @include btn();
 }
-		

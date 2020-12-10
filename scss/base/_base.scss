@@ -16,19 +16,3 @@ a {
 	display: inline-block;
 }
 
-.Option{
-    width: 10%;
-}
-
-.relative{
-	position: relative;
-}
-
-.hidden{
-	display: none;
-}
-
-@include flexbox($flexmap_list);
-@include position_maker($posmap_list);
-
-
