@@ -39,7 +39,13 @@
     counter-reset: how-to;
     list-style: none;
     & > * {
-        margin-bottom: 1em;
+        margin-bottom: 1.25em;
+    }
+    & a{
+        width: 90%;
+    }
+    &_flexCenter{
+        align-items: center;
     }
     &_flexEnd{
         align-items: flex-end;
@@ -51,9 +57,9 @@
     @include flex(row);
     align-items: center;
     position: relative;
-    width: 90%;
     border-radius: 15px;
     background: $color-background-light;
+    width: 90%;
     padding: 1.5em;
     &::before{
         position: absolute;
@@ -79,16 +85,20 @@
 }
 
 .bloc-rest{
-    position: relative;
     @include flex(column);
-    height: 300px;
+    @include block-shadow();
+    position: relative;
     border-radius: 15px;
+    overflow: hidden;
     &__img{
-        height: 200px;
-        object-fit: contain;
+        height: 225px;
+        object-fit: cover;
     }
     & .descr{
         @include flex(column);
+        justify-content: center;
+        padding: 0.5em 1em 0.5em 1em;
+        height: 4.5em;
         &__h3, .descr__p{
             width: 90%;
             text-align: left;
@@ -98,8 +108,10 @@
         }
         &__icon{
             width: 10%;
-            &_liked{
-
+            &_like::before{
+                /*color: linear-gradient(-5deg, $color-primary, $color-secondary);*/
+                background-clip: text;
+                background-color: blue;
             }
         }
     }

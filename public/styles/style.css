@@ -57,7 +57,8 @@ body {
 }
 
 a {
-  display: inline-block;
+  text-decoration: none;
+  color: black;
 }
 
 .section_bottomExtend {
@@ -97,7 +98,13 @@ a {
   list-style: none;
 }
 .section-content > * {
-  margin-bottom: 1em;
+  margin-bottom: 1.25em;
+}
+.section-content a {
+  width: 90%;
+}
+.section-content_flexCenter {
+  align-items: center;
 }
 .section-content_flexEnd {
   align-items: flex-end;
@@ -109,9 +116,9 @@ a {
   flex-flow: row wrap;
   align-items: center;
   position: relative;
-  width: 90%;
   border-radius: 15px;
   background: lightgrey;
+  width: 90%;
   padding: 1.5em;
 }
 .how-to::before {
@@ -137,19 +144,23 @@ a {
 }
 
 .bloc-rest {
-  position: relative;
   display: flex;
   flex-flow: column wrap;
-  height: 300px;
+  box-shadow: 5px 5px 2px grey;
+  position: relative;
   border-radius: 15px;
+  overflow: hidden;
 }
 .bloc-rest__img {
-  height: 200px;
-  object-fit: contain;
+  height: 225px;
+  object-fit: cover;
 }
 .bloc-rest .descr {
   display: flex;
   flex-flow: column wrap;
+  justify-content: center;
+  padding: 0.5em 1em 0.5em 1em;
+  height: 4.5em;
 }
 .bloc-rest .descr__h3, .bloc-rest .descr .descr__p {
   width: 90%;
@@ -160,6 +171,12 @@ a {
 }
 .bloc-rest .descr__icon {
   width: 10%;
+}
+.bloc-rest .descr__icon_like::before {
+  /*color: linear-gradient(-5deg, $color-primary, $color-secondary);*/
+  background-clip: text;
+  text-fill-color: transparent;
+  background-color: blue;
 }
 .bloc-rest_new::before {
   content: "Nouveau";
