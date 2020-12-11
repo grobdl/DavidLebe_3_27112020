@@ -1,6 +1,6 @@
 .searchBox{
     @include flex(row);
-    @include block-padding();
+    @include block-padding;
     justify-content: center;
     align-items: center;
     background: linear-gradient($color-background-dark 3%, $color-background-normal 10%);

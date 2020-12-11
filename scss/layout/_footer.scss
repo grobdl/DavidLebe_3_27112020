@@ -1,11 +1,24 @@
+footer{
+	margin: 0em;
+	background: grey;
+	@include block_padding();
+}
 .foot-title {
 	&__h2{
 		font-family: 'shrikhand';
+		color: white;
+		text-transform: lowercase;
+		text-align: left;
 	}
 }
 
 .foot-content{
+	@include flex(column);
+	align-items: flex-start;
 	&__a{
-		
+		text-align: left;
+	}
+	&__icon{
+		width: auto;
 	}
 }

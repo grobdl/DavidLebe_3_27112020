@@ -61,25 +61,29 @@ a {
   color: black;
 }
 
-.section_bottomExtend {
-  padding-bottom: 2.5em;
+.section {
+  padding: 2em;
+}
+.section_bottomOnlyPadding {
+  padding-top: 0em;
+  padding-right: 0em;
+  padding-left: 0em;
 }
 .section_bckgdGrey {
-  background: lightgrey;
+  background: #f2f2f2;
 }
 
 .section-title {
   display: flex;
   flex-flow: column wrap;
-  padding: 1em;
   align-items: center;
 }
 .section-title__h2_textLeft {
   text-align: left;
 }
 .section-title__btn {
+  box-shadow: 0px 8px 15px grey;
   padding: 1em;
-  box-shadow: 5px 5px 2px grey;
   margin: 1em 0em 1em 0em;
   width: 60%;
   border-radius: 20px;
@@ -111,13 +115,13 @@ a {
 }
 
 .how-to {
-  box-shadow: 5px 5px 2px grey;
+  box-shadow: 0px 8px 15px grey;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   position: relative;
   border-radius: 15px;
-  background: lightgrey;
+  background: #f2f2f2;
   width: 90%;
   padding: 1.5em;
 }
@@ -125,18 +129,19 @@ a {
   position: absolute;
   counter-increment: how-to;
   content: counter(how-to);
-  left: -1em;
+  left: -0.8em;
   background: #9356dc;
-  padding: 0.25em 0.75em 0.25em 0.75em;
+  padding: 0.2em 0.6em 0.2em 0.6em;
   border-radius: 50%;
   color: white;
   font-weight: bold;
 }
 .how-to__icon {
-  width: 30%;
+  width: 20%;
+  color: #9356dc;
 }
 .how-to__p {
-  width: 70%;
+  width: 80%;
   text-align: left;
 }
 .how-to_purple {
@@ -146,7 +151,7 @@ a {
 .bloc-rest {
   display: flex;
   flex-flow: column wrap;
-  box-shadow: 5px 5px 2px grey;
+  box-shadow: 0px 8px 15px grey;
   position: relative;
   border-radius: 15px;
   overflow: hidden;
@@ -158,6 +163,7 @@ a {
 .bloc-rest .descr {
   display: flex;
   flex-flow: column wrap;
+  background: white;
   justify-content: center;
   padding: 0.5em 1em 0.5em 1em;
   height: 4.5em;
@@ -172,12 +178,6 @@ a {
 .bloc-rest .descr__icon {
   width: 10%;
 }
-.bloc-rest .descr__icon_like::before {
-  /*color: linear-gradient(-5deg, $color-primary, $color-secondary);*/
-  background-clip: text;
-  text-fill-color: transparent;
-  background-color: blue;
-}
 .bloc-rest_new::before {
   content: "Nouveau";
   position: absolute;
@@ -188,8 +188,29 @@ a {
   color: darkgreen;
 }
 
+footer {
+  margin: 0em;
+  background: grey;
+  padding: 1em;
+}
+
 .foot-title__h2 {
   font-family: "shrikhand";
+  color: white;
+  text-transform: lowercase;
+  text-align: left;
+}
+
+.foot-content {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+}
+.foot-content__a {
+  text-align: left;
+}
+.foot-content__icon {
+  width: auto;
 }
 
 .searchBox {

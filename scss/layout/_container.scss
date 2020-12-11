@@ -1,6 +1,9 @@
 .section{
-    &_bottomExtend{
-        padding-bottom: 2.5em;
+    padding: 2em;
+    &_bottomOnlyPadding{
+        padding-top: 0em;
+        padding-right: 0em;
+        padding-left: 0em;
     }
     &_bckgdGrey{
         background: $color-background-light;
@@ -9,7 +12,6 @@
 
 .section-title{
     @include flex(column);
-    @include block_padding();
     align-items: center;
     &__h2{
         &_textLeft{
@@ -20,8 +22,8 @@
 
     }
     &__btn{
-        @include block-padding();
         @include block-shadow();
+        @include block-padding;
         margin: 1em 0em 1em 0em;
 		width: 60%;
 		border-radius: 20px;
@@ -65,18 +67,19 @@
         position: absolute;
         counter-increment: how-to;
         content: counter(how-to);
-        left:-1em;
+        left:-0.8em;
         background: $color-primary;
-        padding: 0.25em 0.75em 0.25em 0.75em;
+        padding: 0.2em 0.6em 0.2em 0.6em;
         border-radius: 50%;
         color: white;
         font-weight: bold;
     }
     &__icon{
-        width: 30%;
+        width: 20%;
+        color: $color-primary;
     }
     &__p{
-        width: 70%;
+        width: 80%;
         text-align: left;
     }
     &_purple{
@@ -96,6 +99,7 @@
     }
     & .descr{
         @include flex(column);
+        background: white;
         justify-content: center;
         padding: 0.5em 1em 0.5em 1em;
         height: 4.5em;
@@ -108,11 +112,6 @@
         }
         &__icon{
             width: 10%;
-            &_like::before{
-                /*color: linear-gradient(-5deg, $color-primary, $color-secondary);*/
-                background-clip: text;
-                background-color: blue;
-            }
         }
     }
     &_new{
