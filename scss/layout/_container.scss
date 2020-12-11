@@ -43,9 +43,6 @@
     & > * {
         margin-bottom: 1.25em;
     }
-    & a{
-        width: 90%;
-    }
     &_flexCenter{
         align-items: center;
     }
@@ -76,7 +73,9 @@
     }
     &__icon{
         width: 20%;
-        color: $color-primary;
+        &_purple{
+            color: $color-primary;
+        }
     }
     &__p{
         width: 80%;
@@ -91,6 +90,8 @@
     @include flex(column);
     @include block-shadow();
     position: relative;
+    width: 95%;
+    background: white;
     border-radius: 15px;
     overflow: hidden;
     &__img{
@@ -99,7 +100,6 @@
     }
     & .descr{
         @include flex(column);
-        background: white;
         justify-content: center;
         padding: 0.5em 1em 0.5em 1em;
         height: 4.5em;
@@ -113,6 +113,12 @@
         &__icon{
             width: 10%;
         }
+    }
+    &__icon{
+        position: absolute;
+        right: 5%;
+        bottom: 7%;
+        width: auto;
     }
     &_new{
         &::before{

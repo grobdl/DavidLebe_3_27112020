@@ -1,43 +1,9 @@
-/* Variables */
-
 $color-primary: #9356dc;
 $color-secondary: #ff79da;
 $color-tertiary: #99e2d0;
-$color-background-dark: grey;
-$color-background-normal: darkgrey;
-$color-background-light: #f2f2f2;
-$color-background-new: lightgreen;
-$color-new: darkgreen;
+$color-background-dark: #353535;
+$color-background-normal: #eaeaea;
+$color-background-light: #f6f6f6;
+$color-background-new: #99E2D0;
+$color-new: #139273;
 $shadow-color: grey;
-
-/* Containers */
-
-/*Shadows*/
-
-$_shdw: (
-	vh: 5px,
-	hh: 5px,
-	blur: 2px,
-	color: lightgrey,
-);
-
-$howto_shdw: (
-	vh: 5px,
-	hh: 5px,
-	blur: 2px,
-	color: lightgrey,
-);
-
-/*position maker maps*/
-
-$abspct_40_nc_nc_5: (top: 40%, left: 5% );
-$abspct_nc_nc_nc_10: (left: 10%);
-$absem_nc_nc_-11_nc: (bottom: -11em);
-$absem_nc_nc_nc_-1: (left: -1em);
-
-$posmap_list: (
-	abspct_40_nc_nc_5: $abspct_40_nc_nc_5,
-	abspct_nc_nc_nc_10: $abspct_nc_nc_nc_10,
-	absem_nc_nc_nc_-1: $absem_nc_nc_nc_-1,
-	absem_nc_nc_-11_nc: $absem_nc_nc_-11_nc
-)

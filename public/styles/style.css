@@ -38,10 +38,6 @@ p {
   margin-block-start: 0.2em;
 }
 
-/* Variables */
-/* Containers */
-/*Shadows*/
-/*position maker maps*/
 body {
   max-width: 480px;
   min-width: 360px;
@@ -70,7 +66,7 @@ a {
   padding-left: 0em;
 }
 .section_bckgdGrey {
-  background: #f2f2f2;
+  background: #f6f6f6;
 }
 
 .section-title {
@@ -104,9 +100,6 @@ a {
 .section-content > * {
   margin-bottom: 1.25em;
 }
-.section-content a {
-  width: 90%;
-}
 .section-content_flexCenter {
   align-items: center;
 }
@@ -121,7 +114,7 @@ a {
   align-items: center;
   position: relative;
   border-radius: 15px;
-  background: #f2f2f2;
+  background: #f6f6f6;
   width: 90%;
   padding: 1.5em;
 }
@@ -138,6 +131,8 @@ a {
 }
 .how-to__icon {
   width: 20%;
+}
+.how-to__icon_purple {
   color: #9356dc;
 }
 .how-to__p {
@@ -153,6 +148,8 @@ a {
   flex-flow: column wrap;
   box-shadow: 0px 8px 15px grey;
   position: relative;
+  width: 95%;
+  background: white;
   border-radius: 15px;
   overflow: hidden;
 }
@@ -163,7 +160,6 @@ a {
 .bloc-rest .descr {
   display: flex;
   flex-flow: column wrap;
-  background: white;
   justify-content: center;
   padding: 0.5em 1em 0.5em 1em;
   height: 4.5em;
@@ -178,14 +174,20 @@ a {
 .bloc-rest .descr__icon {
   width: 10%;
 }
+.bloc-rest__icon {
+  position: absolute;
+  right: 5%;
+  bottom: 7%;
+  width: auto;
+}
 .bloc-rest_new::before {
   content: "Nouveau";
   position: absolute;
   top: 10%;
   right: 10%;
   padding: 0.25em;
-  background-color: lightgreen;
-  color: darkgreen;
+  background-color: #99E2D0;
+  color: #139273;
 }
 
 footer {
@@ -219,7 +221,7 @@ footer {
   padding: 1em;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(grey 3%, darkgrey 10%);
+  background: linear-gradient(#c4c4c4 3%, #eaeaea 10%);
 }
 .searchBox__icon {
   text-align: right;

@@ -3,7 +3,7 @@
     @include block-padding;
     justify-content: center;
     align-items: center;
-    background: linear-gradient($color-background-dark 3%, $color-background-normal 10%);
+    background: linear-gradient(darken($color-background-normal, 15%) 3%, $color-background-normal 10%);
     &__icon{
         text-align: right;
         width: 30%;
