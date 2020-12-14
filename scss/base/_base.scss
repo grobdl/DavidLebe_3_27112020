@@ -1,7 +1,27 @@
 body {
+	position: relative;
+	z-index: -1;
 	max-width: 480px;
 	min-width: 360px;
 	margin: auto;
+	& .spinner{
+		position: fixed;
+		top: 30%;
+		bottom: 30%;
+		left: 30%;
+		width: 40%;
+		background: $color-background-dark;
+		border-radius: 30px;
+		color: white;
+		z-index:2;
+	}
+	&::after{
+		@include afterLayer();
+		content: "";
+		z-index: 1;
+		background: $color-background-dark;
+		opacity: 0.8;
+	}
 }
 
 * {

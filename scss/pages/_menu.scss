@@ -77,13 +77,13 @@
         padding: 0.5em 0em 0.1em 1em;
         width: 80%;
         text-align: left;
-        transition: width 250ms ease-in-out;
+        transition: width 500ms ease-in-out;
     }
     &__p{
         padding: 0.1em 0em 0.5em 1em;
         width: 80%;
         text-align: left;
-        transition: width 250ms ease-in-out;
+        transition: width 500ms ease-in-out;
     }
     &__price{
         width: 20%;
@@ -100,7 +100,7 @@
         &__icon{
             color: white;
             transform: rotate(0deg);
-            transition: transform 250ms ease-in-out;
+            transition: transform 500ms ease-in-out;
         }
     }
 }

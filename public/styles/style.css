@@ -39,9 +39,34 @@ p {
 }
 
 body {
+  position: relative;
+  z-index: -1;
   max-width: 480px;
   min-width: 360px;
   margin: auto;
+}
+body .spinner {
+  position: fixed;
+  top: 30%;
+  bottom: 30%;
+  left: 30%;
+  width: 40%;
+  background: #353535;
+  border-radius: 30px;
+  color: white;
+  z-index: 2;
+}
+body::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  content: "";
+  z-index: 1;
+  background: #353535;
+  opacity: 0.8;
 }
 
 * {
@@ -374,13 +399,13 @@ footer {
   padding: 0.5em 0em 0.1em 1em;
   width: 80%;
   text-align: left;
-  transition: width 250ms ease-in-out;
+  transition: width 500ms ease-in-out;
 }
 .plat__p {
   padding: 0.1em 0em 0.5em 1em;
   width: 80%;
   text-align: left;
-  transition: width 250ms ease-in-out;
+  transition: width 500ms ease-in-out;
 }
 .plat__price {
   width: 20%;
@@ -398,7 +423,7 @@ footer {
 .plat-container__icon {
   color: white;
   transform: rotate(0deg);
-  transition: transform 250ms ease-in-out;
+  transition: transform 500ms ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */
