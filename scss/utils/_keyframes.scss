@@ -1,1 +1,38 @@
-@keyframes 
+@keyframes spinner_translate{
+    0%{
+        transform: translateY(-100%);
+    }
+    55%{
+        transform: translateY(5%);
+    }
+    85%{
+        transform: translateY(-3%);
+    }
+    95%{
+        transform: translateY(1%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+
+@keyframes spinnerp_anim{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes spinnerIcon_anim{
+    0%{
+        transform: rotate(0deg);
+    }
+    60%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
