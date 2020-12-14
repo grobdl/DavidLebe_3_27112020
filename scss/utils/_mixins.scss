@@ -18,5 +18,12 @@
 @mixin textLeft{
 	&_textLeft{
 		text-align: left;
-	} 
+	}
+}
+
+@mixin stackHeart(){
+	&__stackHeart{
+		width: 10%;
+		cursor: pointer;
+	}
 }

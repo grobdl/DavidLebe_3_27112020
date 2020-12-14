@@ -2,8 +2,6 @@
     @include flex(column);
     justify-content: flex-start;
     background: $color-background-light;
-    position: relative;
-    @include btn();
     &__img{
         height: 350px;
         object-fit: cover;
@@ -12,66 +10,97 @@
 
 .restaurant{
     @include block-padding();
-    position: absolute;
-    top: 325px;
+    position: relative;
     background: $color-background-light;
     border-radius: 30px 30px 0px 0px;
 }
 
 .rest-id{
     @include flex(row);
+    @include block-padding();
+    position: absolute; 
+    top: -2em;
+    left: 0;
     justify-content: space-between;
     align-items: center;
+    background: $color-background-light;
     border-radius: 30px 30px 0px 0px;
     &__h2{
-        width: 60%;
+        width: 80%;
     }
-    &__icon{
-        width: 20%;
-    }
+    @include stackHeart();
 }
 
 .rest-menu{
     @include block-padding();
     &__h2{
+        position: relative;
         width: 100%;
+        padding-bottom: 1em;
         font-size: 1.25em;
         text-align: left;
         text-transform: uppercase;
         font-weight: normal;
-    }
-    &__separator{
-        width: 50px;
-        height: 5px;
-        background: $color-tertiary;
+        &::after{
+            position: absolute;
+            top: 1.75em;
+            bottom: 0;
+            left: 0;
+            right: 85%;
+            background: $color-tertiary;
+            content: "";
+        }
     }
 }
 
 .plat{
     @include flex(column);
     @include block-shadow();
-    padding: 0.5em 1em 0.5em 1em;
+    cursor: pointer;
     margin: 1em 0em 1em 0em;
+    overflow: hidden;
     background: white;
     border-radius: 15px;
     height: 4.5em;
+    &:hover{
+        & > .plat__h3{
+            width: 60%;
+        }
+        & > .plat__p{
+            width: 60%;
+        }
+        & > .plat-container .plat-container__icon{
+            transform: rotate(360deg);
+        }
+    }
     &__h3{
+        padding: 0.5em 0em 0.1em 1em;
         width: 80%;
         text-align: left;
+        transition: width 250ms ease-in-out;
     }
     &__p{
+        padding: 0.1em 0em 0.5em 1em;
         width: 80%;
         text-align: left;
-        }
+        transition: width 250ms ease-in-out;
+    }
     &__price{
         width: 20%;
-        text-align: right;
+        text-align: center;
         font-weight: bold;
         height: 4.5em;
-        padding-top: 1.75em;
+        padding-top: 2.25em;
     }
-    &__icon{
-        display: none;
-        width: 10%;
+    &-container{
+        width: 20%;
+        background: $color-tertiary;
+        height: 4.5em;
+        padding: 1.75em;
+        &__icon{
+            color: white;
+            transform: rotate(0deg);
+            transition: transform 250ms ease-in-out;
+        }
     }
 }

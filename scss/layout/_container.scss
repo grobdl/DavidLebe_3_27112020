@@ -19,7 +19,6 @@
     &__p{
 
     }
-    @include btn();
 }
 
 .section-content{
@@ -91,22 +90,17 @@
         padding: 0.5em 1em 0.5em 1em;
         height: 4.5em;
         &__h3, .descr__p{
-            width: 90%;
+            max-width: 90%;
             text-align: left;
         }
         &__h3{
             font-weight: bold;
         }
-        &__icon{
-            width: 10%;
-        }
+        @include stackHeart();
     }
-    &__icon{
-        position: absolute;
-        right: 5%;
-        bottom: 7%;
-        width: auto;
-    }
+
+    
+    
     &_new{
         &::before{
             content: "Nouveau";
