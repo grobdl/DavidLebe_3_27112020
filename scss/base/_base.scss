@@ -4,7 +4,10 @@ body {
 	max-width: 480px;
 	min-width: 360px;
 	margin: auto;
-	& .spinner{
+}
+
+.index{
+	&__spinner{
 		@include flex(column);
 		justify-content: center;
 		position: fixed;
@@ -16,20 +19,22 @@ body {
 		border-radius: 30px;
 		color: white;
 		z-index:2;
-		animation: spinner_translate 1000ms;
+		animation: spinner_anim 4000ms both;
 		&__icon{
-			animation: spinnerContent_scale 750ms 250ms both, spinnerIcon_rotate 2000ms both infinite;
+			animation: spinnerIcon_anim 3500ms 250ms both;
 		}
 		&__p{
-			animation: spinnerContent_scale 750ms 250ms both;
+			animation: spinnerP_anim 3500ms 250ms both;
 		}
 	}
 	&::after{
 		@include afterLayer();
 		content: "";
 		z-index: 1;
+		transform-origin: right;
+		opacity:0.8;
 		background: $color-background-dark;
-		opacity: 0.8;
+		animation: loading_background 4000ms both;
 	}
 }
 

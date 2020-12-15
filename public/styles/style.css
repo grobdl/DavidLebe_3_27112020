@@ -38,40 +38,63 @@ p {
   margin-block-start: 0.2em;
 }
 
-@keyframes spinner_translate {
-  0% {
-    transform: translateY(-100%);
-  }
-  55% {
-    transform: translateY(5%);
-  }
-  85% {
-    transform: translateY(-3%);
-  }
-  95% {
-    transform: translateY(1%);
+@keyframes loading_background {
+  0%, 80% {
+    transform: scale(1);
   }
   100% {
-    transform: translateY(0%);
+    transform: scaleX(0);
   }
 }
-@keyframes spinnerp_anim {
+@keyframes spinner_anim {
+  0% {
+    transform: translateY(-200%) scale(0);
+  }
+  16% {
+    transform: translateY(5%) scale(1);
+  }
+  21% {
+    transform: translateY(-3%);
+  }
+  24% {
+    transform: translateY(1%);
+  }
+  25% {
+    transform: translateY(0%);
+  }
+  75% {
+    transform: translateX(0%);
+  }
+  78% {
+    transform: translateX(-5%) skew(15deg, 0deg);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+@keyframes spinnerP_anim {
   0% {
     transform: scale(0);
   }
-  100% {
+  25%, 75% {
     transform: scale(1);
   }
 }
 @keyframes spinnerIcon_anim {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0deg) scale(0);
   }
-  60% {
-    transform: rotate(180deg);
+  25% {
+    transform: rotate(180deg) scale(1);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  75% {
+    transform: rotate(540deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(720deg);
   }
 }
 body {
@@ -81,7 +104,8 @@ body {
   min-width: 360px;
   margin: auto;
 }
-body .spinner {
+
+.index__spinner {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
@@ -94,15 +118,15 @@ body .spinner {
   border-radius: 30px;
   color: white;
   z-index: 2;
-  animation: spinner_translate 1000ms;
+  animation: spinner_anim 4000ms both;
 }
-body .spinner__icon {
-  animation: spinnerContent_scale 750ms 250ms both, spinnerIcon_rotate 2000ms both infinite;
+.index__spinner__icon {
+  animation: spinnerIcon_anim 3500ms 250ms both;
 }
-body .spinner__p {
-  animation: spinnerContent_scale 750ms 250ms both;
+.index__spinner__p {
+  animation: spinnerP_anim 3500ms 250ms both;
 }
-body::after {
+.index::after {
   position: absolute;
   top: 0;
   right: 0;
@@ -110,8 +134,10 @@ body::after {
   left: 0;
   content: "";
   z-index: 1;
-  background: #353535;
+  transform-origin: right;
   opacity: 0.8;
+  background: #353535;
+  animation: loading_background 4000ms both;
 }
 
 * {
