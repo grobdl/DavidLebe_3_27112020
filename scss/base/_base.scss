@@ -1,13 +1,21 @@
+* {
+	box-sizing: border-box;
+	text-transform: capitalize;
+	text-align: center;
+	width: 100%;
+}
+
 body {
 	position: relative;
 	z-index: -1;
-	max-width: 480px;
+	max-width: 760px;
 	min-width: 360px;
 	margin: auto;
+	overflow-x: hidden;
 }
 
 .index{
-	&__spinner{
+	&-spinner{
 		@include flex(column);
 		justify-content: center;
 		position: fixed;
@@ -38,22 +46,9 @@ body {
 	}
 }
 
-* {
-	box-sizing: border-box;
-	text-transform: capitalize;
-	text-align: center;
-	width: 100%;
-}
-
 a {
 	text-decoration: none;
 	color: black;
-}
-
-h2, h3, p{
-	white-space: nowrap;
-	overflow: hidden;
-	text-overflow: ellipsis;
 }
 
 .stackHeart{
