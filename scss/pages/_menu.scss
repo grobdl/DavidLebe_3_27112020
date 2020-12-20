@@ -32,20 +32,26 @@
 }
 
 .rest-menu{
-    @for $i from 2 to 5{
+    @include block-padding();
+    @include media-width($media-width__map) using ($map){
+        @include flex(row)
+    }
+    @for $i from 2 through 10{
         &:nth-child(#{$i}){
+            &::before{
+                content: $i;
+            }
             $delay_menu: ($i - 2) * 800ms;
             animation: apparition_menu 800ms $delay_menu both ease-in-out;
-            @for $j from 2 to 8{
+            @for $j from 2 through 4{
                 & .plat:nth-child(#{$j}){
                     $delay_plat: ($i - 2)*800ms + $j * 200ms;
-                    $j: $j+1;
                     animation: apparition_plat 200ms $delay_plat both ease-in-out;
                 }
             }
         }
     }
-    @include block-padding();
+    justify-content: space-around;
     &__h2{
         position: relative;
         width: 100%;
@@ -68,7 +74,11 @@
 
 .plat{
     @include flex(column);
-    @include block-shadow();
+    @include block-shadow($shadow-color);
+    @include media-width($media-width__map) using ($map){
+        $width__map: map-get($media-width__map, $map);
+        width: map-get($width__map, plat-width);
+    }
     cursor: pointer;
     margin: 1em 0em 1em 0em;
     background: white;

@@ -1,9 +1,30 @@
-@mixin tester() {
-	border: 1px solid;
+@mixin afterLayer(){
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 @mixin block-padding(){
 	padding: 1em;
+}
+
+@mixin block-shadow($color){
+	box-shadow: 0px 8px 15px $color;
+}
+
+@mixin ellipsis($value){
+	@if $value == 'do'{
+		white-space: pre;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	@else{
+		white-space: normal;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
 }
 
 @mixin flex($direction){
@@ -11,13 +32,31 @@
 	flex-flow: $direction wrap;
 }
 
-@mixin block-shadow{
-	box-shadow: 0px 8px 15px $shadow-color;
+@mixin hidden{
+    &_hidden{
+        display: none;
+    }
 }
 
-@mixin textLeft{
-	&_textLeft{
-		text-align: left;
+@mixin media-width ($map){
+	@each $key, $value in $map{
+		$min: map-get($value, min);
+		$max: map-get($value, max);
+		@if $min == 'none' {
+			@media screen and (max-width: $max){
+				@content ($key);
+			}		
+		}
+		@if $max == 'none' {
+			@media screen and (min-width: $min){
+				@content ($key);
+			}		
+		}
+		@else{
+			@media screen and (min-width: $min) and (max-width: $max){
+				@content ($key);
+			}
+		}
 	}
 }
 
@@ -28,10 +67,8 @@
 	}
 }
 
-@mixin afterLayer(){
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+@mixin textLeft{
+	&_textLeft{
+		text-align: left;
+	}
 }

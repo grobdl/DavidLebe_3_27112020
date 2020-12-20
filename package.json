@@ -8,7 +8,7 @@
   },
   "scripts": {
     "sass": "sass --watch ./scss/main.scss:./public/styles/style.css",
-    "prefix": "postcss ./public/styles/style.css --use autoprefixer -d ./public/style/prefixed/"
+    "prefix": "postcss ./public/styles/style.css --use autoprefixer -d ./public/styles/prefixed/"
   },
   "author": "",
   "license": "ISC"

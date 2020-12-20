@@ -5,12 +5,11 @@
         top: 1em;
         left: 0em;
         width: 10%;
-        &_hidden{
-            display:none;
-        }
+        @include hidden;
     }
     &__h1{
 
     }
 }
+
 

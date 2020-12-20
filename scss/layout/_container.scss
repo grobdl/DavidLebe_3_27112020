@@ -1,3 +1,35 @@
+.index{
+    position: relative;
+	&-spinner{
+		@include flex(column);
+		justify-content: center;
+		position: fixed;
+		top: 30%;
+		bottom: 50%;
+		left: 30%;
+		width: 40%;
+		background: $color-background-dark;
+		border-radius: 30px;
+		color: white;
+		z-index:2;
+		animation: spinner_anim 4000ms both;
+		&__icon{
+			animation: spinnerIcon_anim 3500ms 250ms both;
+		}
+		&__p{
+			animation: spinnerP_anim 3500ms 250ms both;
+		}
+	}
+	&::after{
+		@include afterLayer();
+		content: "";
+		z-index: 1;
+		transform-origin: right;
+		background: white;
+		animation: loading_background 4000ms both;
+	}
+}
+
 .section{
     padding: 2em;
     &_bottomOnlyPadding{
@@ -23,6 +55,10 @@
 
 .section-content{
     @include flex(column);
+    @include media-width($media-width__map) using ($map){
+        @include flex(row);
+        justify-content: space-around;
+    }
     padding: 0em 1em 0em 1em;
     counter-reset: how-to;
     list-style: none;
@@ -38,8 +74,14 @@
 }
 
 .how-to{
-    @include block-shadow();
+    @include block-shadow($shadow-color);
     @include flex(row);
+    @include media-width($media-width__map) using ($map){
+        $width__map: map-get($media-width__map, $map);
+        width: map-get($width__map, howto-width);
+        height: 6em;
+
+    }
     align-items: center;
     position: relative;
     border-radius: 15px;
@@ -58,12 +100,18 @@
         font-weight: bold;
     }
     &__icon{
+        @include media-width($media-width__map) using ($map){
+            text-align: right;
+        }
         width: 20%;
         &_purple{
             color: $color-primary;
         }
     }
     &__p{
+        @include media-width($media-width__map) using ($map){
+            text-align: center;
+        }
         width: 80%;
         text-align: left;
     }
@@ -74,7 +122,11 @@
 
 .bloc-rest{
     @include flex(column);
-    @include block-shadow();
+    @include block-shadow($shadow-color);
+    @include media-width($media-width__map) using ($map){
+        $width__map: map-get($media-width__map, $map);
+        width: map-get($width__map, rest-width);
+    }
     position: relative;
     width: 95%;
     background: white;
