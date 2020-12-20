@@ -60,6 +60,11 @@
 	}
 }
 
+@mixin media-width__bloc($media-map, $breakpoint-map, $bloc){
+	$width__map: map-get($media-map, $breakpoint-map);
+	width: map-get($width__map, $bloc);
+}
+
 @mixin stackHeart(){
 	&__stackHeart{
 		width: 10%;

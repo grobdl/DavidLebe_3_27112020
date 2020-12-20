@@ -150,7 +150,7 @@ body {
 }
 @media screen and (min-width: 1025px) {
   body {
-    max-width: "none";
+    max-width: none;
     min-width: 1025px;
   }
 }
@@ -479,6 +479,7 @@ footer {
 .head-title__a_hidden {
   display: none;
 }
+
 .page-content {
   display: flex;
   flex-flow: column wrap;
@@ -536,9 +537,6 @@ footer {
 .rest-menu:nth-child(2) {
   animation: apparition_menu 800ms 0ms both ease-in-out;
 }
-.rest-menu:nth-child(2)::before {
-  content: 2;
-}
 .rest-menu:nth-child(2) .plat:nth-child(2) {
   animation: apparition_plat 200ms 400ms both ease-in-out;
 }
@@ -550,9 +548,6 @@ footer {
 }
 .rest-menu:nth-child(3) {
   animation: apparition_menu 800ms 800ms both ease-in-out;
-}
-.rest-menu:nth-child(3)::before {
-  content: 3;
 }
 .rest-menu:nth-child(3) .plat:nth-child(2) {
   animation: apparition_plat 200ms 1200ms both ease-in-out;
@@ -566,9 +561,6 @@ footer {
 .rest-menu:nth-child(4) {
   animation: apparition_menu 800ms 1600ms both ease-in-out;
 }
-.rest-menu:nth-child(4)::before {
-  content: 4;
-}
 .rest-menu:nth-child(4) .plat:nth-child(2) {
   animation: apparition_plat 200ms 2000ms both ease-in-out;
 }
@@ -577,96 +569,6 @@ footer {
 }
 .rest-menu:nth-child(4) .plat:nth-child(4) {
   animation: apparition_plat 200ms 2400ms both ease-in-out;
-}
-.rest-menu:nth-child(5) {
-  animation: apparition_menu 800ms 2400ms both ease-in-out;
-}
-.rest-menu:nth-child(5)::before {
-  content: 5;
-}
-.rest-menu:nth-child(5) .plat:nth-child(2) {
-  animation: apparition_plat 200ms 2800ms both ease-in-out;
-}
-.rest-menu:nth-child(5) .plat:nth-child(3) {
-  animation: apparition_plat 200ms 3000ms both ease-in-out;
-}
-.rest-menu:nth-child(5) .plat:nth-child(4) {
-  animation: apparition_plat 200ms 3200ms both ease-in-out;
-}
-.rest-menu:nth-child(6) {
-  animation: apparition_menu 800ms 3200ms both ease-in-out;
-}
-.rest-menu:nth-child(6)::before {
-  content: 6;
-}
-.rest-menu:nth-child(6) .plat:nth-child(2) {
-  animation: apparition_plat 200ms 3600ms both ease-in-out;
-}
-.rest-menu:nth-child(6) .plat:nth-child(3) {
-  animation: apparition_plat 200ms 3800ms both ease-in-out;
-}
-.rest-menu:nth-child(6) .plat:nth-child(4) {
-  animation: apparition_plat 200ms 4000ms both ease-in-out;
-}
-.rest-menu:nth-child(7) {
-  animation: apparition_menu 800ms 4000ms both ease-in-out;
-}
-.rest-menu:nth-child(7)::before {
-  content: 7;
-}
-.rest-menu:nth-child(7) .plat:nth-child(2) {
-  animation: apparition_plat 200ms 4400ms both ease-in-out;
-}
-.rest-menu:nth-child(7) .plat:nth-child(3) {
-  animation: apparition_plat 200ms 4600ms both ease-in-out;
-}
-.rest-menu:nth-child(7) .plat:nth-child(4) {
-  animation: apparition_plat 200ms 4800ms both ease-in-out;
-}
-.rest-menu:nth-child(8) {
-  animation: apparition_menu 800ms 4800ms both ease-in-out;
-}
-.rest-menu:nth-child(8)::before {
-  content: 8;
-}
-.rest-menu:nth-child(8) .plat:nth-child(2) {
-  animation: apparition_plat 200ms 5200ms both ease-in-out;
-}
-.rest-menu:nth-child(8) .plat:nth-child(3) {
-  animation: apparition_plat 200ms 5400ms both ease-in-out;
-}
-.rest-menu:nth-child(8) .plat:nth-child(4) {
-  animation: apparition_plat 200ms 5600ms both ease-in-out;
-}
-.rest-menu:nth-child(9) {
-  animation: apparition_menu 800ms 5600ms both ease-in-out;
-}
-.rest-menu:nth-child(9)::before {
-  content: 9;
-}
-.rest-menu:nth-child(9) .plat:nth-child(2) {
-  animation: apparition_plat 200ms 6000ms both ease-in-out;
-}
-.rest-menu:nth-child(9) .plat:nth-child(3) {
-  animation: apparition_plat 200ms 6200ms both ease-in-out;
-}
-.rest-menu:nth-child(9) .plat:nth-child(4) {
-  animation: apparition_plat 200ms 6400ms both ease-in-out;
-}
-.rest-menu:nth-child(10) {
-  animation: apparition_menu 800ms 6400ms both ease-in-out;
-}
-.rest-menu:nth-child(10)::before {
-  content: 10;
-}
-.rest-menu:nth-child(10) .plat:nth-child(2) {
-  animation: apparition_plat 200ms 6800ms both ease-in-out;
-}
-.rest-menu:nth-child(10) .plat:nth-child(3) {
-  animation: apparition_plat 200ms 7000ms both ease-in-out;
-}
-.rest-menu:nth-child(10) .plat:nth-child(4) {
-  animation: apparition_plat 200ms 7200ms both ease-in-out;
 }
 .rest-menu__h2 {
   position: relative;
