@@ -18,14 +18,14 @@ h1 {
   font-family: "Shrikhand";
   text-transform: lowercase;
   font-size: 2.5em;
-  margin: 0.5em;
+  margin: 0.5em 0em 0.5em 0em;
 }
 
 h2 {
   font-size: 1.75em;
   text-align: center;
   line-height: 1em;
-  margin: 0.5em;
+  margin: 0.5em 0em 0.5em 0em;
 }
 
 h3 {
@@ -546,6 +546,9 @@ footer {
 .rest-menu:nth-child(2) .plat:nth-child(4) {
   animation: apparition_plat 200ms 800ms both ease-in-out;
 }
+.rest-menu:nth-child(2) .plat:nth-child(5) {
+  animation: apparition_plat 200ms 1000ms both ease-in-out;
+}
 .rest-menu:nth-child(3) {
   animation: apparition_menu 800ms 800ms both ease-in-out;
 }
@@ -558,6 +561,9 @@ footer {
 .rest-menu:nth-child(3) .plat:nth-child(4) {
   animation: apparition_plat 200ms 1600ms both ease-in-out;
 }
+.rest-menu:nth-child(3) .plat:nth-child(5) {
+  animation: apparition_plat 200ms 1800ms both ease-in-out;
+}
 .rest-menu:nth-child(4) {
   animation: apparition_menu 800ms 1600ms both ease-in-out;
 }
@@ -569,6 +575,9 @@ footer {
 }
 .rest-menu:nth-child(4) .plat:nth-child(4) {
   animation: apparition_plat 200ms 2400ms both ease-in-out;
+}
+.rest-menu:nth-child(4) .plat:nth-child(5) {
+  animation: apparition_plat 200ms 2600ms both ease-in-out;
 }
 .rest-menu__h2 {
   position: relative;

@@ -40,7 +40,7 @@
         &:nth-child(#{$i}){
             $delay_menu: ($i - 2) * 800ms;
             animation: apparition_menu 800ms $delay_menu both ease-in-out;
-            @for $j from 2 through 4{
+            @for $j from 2 through 5{
                 & .plat:nth-child(#{$j}){
                     $delay_plat: ($i - 2)*800ms + $j * 200ms;
                     animation: apparition_plat 200ms $delay_plat both ease-in-out;
