@@ -193,7 +193,17 @@ a {
   font-weight: bold;
   transition: box-shadow 250ms;
 }
-.btn:hover::after {
+@media screen and (min-width: 761px) and (max-width: 1024px) {
+  .btn:hover::after {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .btn:hover::after {
+    opacity: 1;
+  }
+}
+.btn:active::after {
   opacity: 1;
 }
 .btn::after {
@@ -206,7 +216,7 @@ a {
   z-index: -1;
   content: "";
   border-radius: 20px;
-  background: #ae80e5;
+  background: linear-gradient(-30deg, transparent, 60%, #ff79da);
   opacity: 0;
   transition: opacity 250ms ease-in-out;
 }
@@ -372,10 +382,10 @@ a {
   flex-flow: column wrap;
   box-shadow: 0px 8px 15px lightgrey;
   position: relative;
+  z-index: 1;
   width: 95%;
   background: white;
   border-radius: 15px;
-  overflow: hidden;
 }
 @media screen and (min-width: 761px) and (max-width: 1024px) {
   .bloc-rest {
@@ -390,6 +400,7 @@ a {
 .bloc-rest__img {
   height: 225px;
   object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
 }
 .bloc-rest .descr {
   display: flex;
@@ -602,10 +613,10 @@ footer {
   display: flex;
   flex-flow: column wrap;
   box-shadow: 0px 8px 15px lightgrey;
+  overflow: hidden;
   cursor: pointer;
   margin: 1em 0em 1em 0em;
   background: white;
-  overflow: hidden;
   border-radius: 15px;
   height: 4.5em;
 }
@@ -613,19 +624,37 @@ footer {
   .plat {
     width: 80%;
   }
+  .plat:hover > .plat__h3 {
+    width: 60%;
+  }
+  .plat:hover > .plat__p {
+    width: 60%;
+  }
+  .plat:hover > .plat-container .plat-container__icon {
+    transform: rotate(360deg);
+  }
 }
 @media screen and (min-width: 1025px) {
   .plat {
     width: 45%;
   }
+  .plat:hover > .plat__h3 {
+    width: 60%;
+  }
+  .plat:hover > .plat__p {
+    width: 60%;
+  }
+  .plat:hover > .plat-container .plat-container__icon {
+    transform: rotate(360deg);
+  }
 }
-.plat:hover > .plat__h3 {
+.plat:active > .plat__h3 {
   width: 60%;
 }
-.plat:hover > .plat__p {
+.plat:active > .plat__p {
   width: 60%;
 }
-.plat:hover > .plat-container .plat-container__icon {
+.plat:active > .plat-container .plat-container__icon {
   transform: rotate(360deg);
 }
 .plat__h3 {

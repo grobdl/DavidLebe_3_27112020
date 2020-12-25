@@ -34,7 +34,7 @@
 .rest-menu{
     @include block-padding();
     @include media-width($media-width__map) using ($map){
-        @include flex(row)
+        @include flex(row);
     }
     @for $i from 2 through 4{
         &:nth-child(#{$i}){
@@ -74,23 +74,18 @@
     @include block-shadow($shadow-color);
     @include media-width($media-width__map) using ($map){
         @include media-width__bloc($media-width__map, $map, plat-width);
+        &:hover{
+            @include media-transition__plat;
+        }
     }
+    overflow: hidden;
     cursor: pointer;
     margin: 1em 0em 1em 0em;
     background: white;
-    overflow: hidden;
     border-radius: 15px;
     height: 4.5em;
-    &:hover{
-        & > .plat__h3{
-            width: 60%;
-        }
-        & > .plat__p{
-            width: 60%;
-        }
-        & > .plat-container .plat-container__icon{
-            transform: rotate(360deg);
-        }
+    &:active{
+        @include media-transition__plat;
     }
     &__h3{
         white-space: pre;

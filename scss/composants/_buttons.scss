@@ -13,10 +13,13 @@
     color: white;
     font-weight: bold;
     transition: box-shadow 250ms;
-    &:hover{
-        &::after{
-            opacity: 1;
+    @include media-width($media-width__map) using ($map){
+        &:hover{
+            @include media-transition__btn;
         }
+    }
+    &:active{
+        @include media-transition__btn;
     }
     &::after{
         @include block-shadow($shadow-color_hover);
@@ -28,7 +31,7 @@
         z-index: -1;
         content: "";
         border-radius: 20px;
-        background: lighten($color-primary, 10);
+        background: linear-gradient(-30deg, transparent, 60%,  $color-secondary);
         opacity: 0;
         transition: opacity 250ms ease-in-out;
     }

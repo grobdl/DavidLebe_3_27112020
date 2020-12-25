@@ -126,13 +126,14 @@
         @include media-width__bloc($media-width__map, $map, rest-width);
     }
     position: relative;
+    z-index: 1;
     width: 95%;
     background: white;
     border-radius: 15px;
-    overflow: hidden;
     &__img{
         height: 225px;
         object-fit: cover;
+        border-radius: 20px 20px 0px 0px;
     }
     & .descr{
         @include flex(column);
