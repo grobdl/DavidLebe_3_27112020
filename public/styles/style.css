@@ -165,10 +165,26 @@ a {
   z-index: 1;
   transition: opacity 250ms ease-in-out;
 }
-.stackHeart__icon:hover {
+@media screen and (min-width: 761px) and (max-width: 1024px) {
+  .stackHeart__icon:hover {
+    opacity: 0;
+  }
+  .stackHeart__icon:hover + .stackHeart__icon_full {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .stackHeart__icon:hover {
+    opacity: 0;
+  }
+  .stackHeart__icon:hover + .stackHeart__icon_full {
+    opacity: 1;
+  }
+}
+.stackHeart__icon:active {
   opacity: 0;
 }
-.stackHeart__icon:hover + .stackHeart__icon_full {
+.stackHeart__icon:active + .stackHeart__icon_full {
   opacity: 1;
 }
 .stackHeart__icon_full {
@@ -407,7 +423,9 @@ a {
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
+  position: relative;
   padding: 0.5em 1em 0.5em 1em;
+  width: 90%;
   height: 4.5em;
 }
 .bloc-rest .descr__h3, .bloc-rest .descr .descr__p {
@@ -420,6 +438,11 @@ a {
 .bloc-rest .descr__stackHeart {
   width: 10%;
   cursor: pointer;
+}
+.bloc-rest .descr__stackHeart-menu {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 .bloc-rest_new::before {
   content: "Nouveau";
@@ -439,9 +462,9 @@ footer {
 
 .foot-title__h2 {
   font-family: "shrikhand";
-  color: white;
   text-transform: lowercase;
   text-align: left;
+  color: white;
 }
 
 .foot-content {
@@ -451,9 +474,11 @@ footer {
 }
 .foot-content__a {
   text-align: left;
+  color: white;
 }
 .foot-content__icon {
   width: auto;
+  color: white;
 }
 
 .searchBox {
@@ -528,6 +553,11 @@ footer {
 .rest-id__stackHeart {
   width: 10%;
   cursor: pointer;
+}
+.rest-id__stackHeart-menu {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
 
 .rest-menu {

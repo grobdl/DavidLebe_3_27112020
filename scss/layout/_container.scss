@@ -139,7 +139,9 @@
     & .descr{
         @include flex(column);
         justify-content: center;
+        position: relative;
         padding: 0.5em 1em 0.5em 1em;
+        width: 90%;
         height: 4.5em;
         &__h3, .descr__p{
             max-width: 90%;

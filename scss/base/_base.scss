@@ -26,10 +26,18 @@ a {
 
 .stackHeart{
 	&__icon{
+		@include media-width($media-width__map) using ($map){
+			&:hover{
+				opacity: 0;
+				& + .stackHeart__icon_full {
+					opacity: 1;
+				}
+			}
+		}
 		opacity: 1;
 		z-index: 1;
 		transition: opacity 250ms ease-in-out;
-		&:hover{
+		&:active{
 			opacity: 0;
 			& + .stackHeart__icon_full {
 				opacity: 1;

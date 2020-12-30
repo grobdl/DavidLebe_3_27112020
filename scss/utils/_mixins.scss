@@ -87,6 +87,11 @@
 	&__stackHeart{
 		width: 10%;
 		cursor: pointer;
+		&-menu{
+			position: absolute;
+			bottom: 20px;
+			right : 20px;
+		}
 	}
 }
 

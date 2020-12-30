@@ -6,9 +6,9 @@ footer{
 .foot-title {
 	&__h2{
 		font-family: 'shrikhand';
-		color: white;
 		text-transform: lowercase;
 		text-align: left;
+		color: white;
 	}
 }
 
@@ -17,8 +17,10 @@ footer{
 	align-items: flex-start;
 	&__a{
 		text-align: left;
+		color: white;
 	}
 	&__icon{
 		width: auto;
+		color: white;
 	}
 }
