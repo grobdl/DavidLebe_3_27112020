@@ -112,7 +112,8 @@
             text-align: center;
         }
         width: 80%;
-        text-align: left;
+        text-align: center;
+        font-weight: bold;
     }
     &_purple{
         background: enlight($color-primary, 30);
